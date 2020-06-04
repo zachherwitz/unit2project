@@ -55,6 +55,11 @@ contacts.get('/:id/edit', (req, res) => {
 })
 
 // DESTROY //
+contacts.delete('/:id', (req, res) => {
+  Contact.findByIdAndRemove(req.params.id, (err, deletedContact) => {
+    res.redirect('/contacts/')
+  })
+})
 
 // SHOW //
 contacts.get('/:id', (req, res) => {
