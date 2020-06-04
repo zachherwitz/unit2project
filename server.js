@@ -58,7 +58,7 @@ app.use('/contacts', contactsController)
 
 // routes
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Welcome!')
 })
 
 //zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
