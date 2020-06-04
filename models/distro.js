@@ -1,22 +1,15 @@
 const mongoose = require('mongoose');
 
-const contactSchema = new mongoose.Schema(
+const distroSchema = new mongoose.Schema(
   {
     name: String,
-    department: String,
-    title: String,
-    departmentHead: Boolean,
-    phone: String,
-    email: String,
-    emergencyContactName: String,
-    emergencyContactNumber: String,
-    emergencyContactRelationship: String,
-    btl: Boolean,
-    core: Boolean
+    members: String,
+    confidential: Boolean
   }
 )
 
-const Contact = mongoose.model('Contact', contactSchema);
+
+const Distro = mongoose.model('Distro', distroSchema);
 
 //zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
 //                                                                          //
@@ -24,4 +17,4 @@ const Contact = mongoose.model('Contact', contactSchema);
 //                                                                          //
 //zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
 
-module.exports = Contact;
+module.exports = Distro;

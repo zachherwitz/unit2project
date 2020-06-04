@@ -38,7 +38,7 @@ const setCheckboxes = (req) => {
 // NEW //
 contacts.get('/new', (req, res) => {
   res.render(
-    'new.ejs'
+    'contacts/contacts-new.ejs'
   )
 })
 
@@ -46,7 +46,7 @@ contacts.get('/new', (req, res) => {
 contacts.get('/:id/edit', (req, res) => {
   Contact.findById(req.params.id, (error, showContact) => {
     res.render(
-      'edit.ejs',
+      'contacts/contacts-edit.ejs',
       {
         contact: showContact
       }
@@ -56,7 +56,7 @@ contacts.get('/:id/edit', (req, res) => {
 
 // DESTROY //
 contacts.delete('/:id', (req, res) => {
-  Contact.findByIdAndRemove(req.params.id, (err, deletedContact) => {
+  Contact.findByIdAndRemove(req.params.id, (error, deletedContact) => {
     res.redirect('/contacts/')
   })
 })
@@ -65,7 +65,7 @@ contacts.delete('/:id', (req, res) => {
 contacts.get('/:id', (req, res) => {
   Contact.findById(req.params.id, (error, showContact) => {
     res.render(
-      'show.ejs',
+      'contacts/contacts-show.ejs',
       {
         contact: showContact
       }
@@ -96,7 +96,7 @@ contacts.post('/', (req, res) => {
 contacts.get('/', (req, res) => {
   Contact.find({}, (error, allContacts) => {
     res.render(
-      'index.ejs',
+      'contacts/contacts-index.ejs',
       {
         contacts: allContacts
       }
@@ -104,49 +104,56 @@ contacts.get('/', (req, res) => {
   })
 })
 
+//R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P
+//                                                                           //
+//                                GRAVEYARD                                  //
+//                                                                           //
+//R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P
 //// MISC ROUTES ////
 // Test Route //
 // contacts.get('/', (req, res) => {
 //   res.send('Testing, working now with seed route available!')
 // })
 
-// Seed Route //
-contacts.get('/seed/confirm', (req, res) => {
-  Contact.create(
-    [
-      {
-        name: 'Zach H',
-        department: 'Production',
-        title: 'Production Secretary',
-        departmentHead: false,
-        phone: 'XXX-XXX-XXXX',
-        email: 'XXXX@xxx.com',
-        emergencyContactName: 'Olivia M',
-        emergencyContactNumber: 'XXX-XXX-XXXX',
-        emergencyContactRelationship: 'Partner',
-        btl: true,
-        core: true
-      },
-      {
-        name: 'Max P',
-        department: 'Production',
-        title: 'Production Assistant',
-        departmentHead: false,
-        phone: 'XXX-XXX-XXXX',
-        email: 'XXXX@xxx.com',
-        btl: true,
-        core: true
-      }
-    ],
-    (error, data) => {
-      res.redirect('/contacts')
-    }
-  )
-})
+// // Seed Route //
+// contacts.get('/seed/confirm', (req, res) => {
+//   Contact.create(
+//     [
+//       {
+//         name: 'Zach H',
+//         department: 'Production',
+//         title: 'Production Secretary',
+//         departmentHead: false,
+//         phone: 'XXX-XXX-XXXX',
+//         email: 'XXXX@xxx.com',
+//         emergencyContactName: 'Olivia M',
+//         emergencyContactNumber: 'XXX-XXX-XXXX',
+//         emergencyContactRelationship: 'Partner',
+//         btl: true,
+//         core: true
+//       },
+//       {
+//         name: 'Max P',
+//         department: 'Production',
+//         title: 'Production Assistant',
+//         departmentHead: false,
+//         phone: 'XXX-XXX-XXXX',
+//         email: 'XXXX@xxx.com',
+//         btl: true,
+//         core: true
+//       }
+//     ],
+//     (error, data) => {
+//       res.redirect('/contacts')
+//     }
+//   )
+// })
 
 
-
-
-
+//zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
+//                                                                          //
+//                                  EXPORT                                  //
+//                                                                          //
+//zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
 
 module.exports = contacts;

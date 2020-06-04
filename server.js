@@ -53,8 +53,11 @@ app.use(methodOverride('_method'))
 //zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
 
 // ADD CONTROLLERS HERE:
-const contactsController = require('./controllers/contacts_controller')
+const contactsController = require('./controllers/contacts_controller.js')
 app.use('/contacts', contactsController)
+
+const distrosController = require('./controllers/distros_controller.js')
+app.use('/distros', distrosController)
 
 // routes
 app.get('/', (req, res) => {

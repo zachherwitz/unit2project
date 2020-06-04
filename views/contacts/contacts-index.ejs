@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Contacts Page</h1>
+    <h3><a href="/contacts/new">Register New Contact</a></h3>
+    <h3><a href="/distros/">Go To Distro Index</a></h3>
+    <% for(let i = 0; i < contacts.length; i++){ %>
+      <div>
+        <a href="/contacts/<%=contacts[i].id%>"><%=contacts[i].name%></a> -- <%=contacts[i].department%>
+        <a href="/contacts/<%=contacts[i].id%>/edit">Edit</a>
+        <form action="/contacts/<%=contacts[i].id%>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE">
+        </form>
+      </div>
+    <% } %>
+  </body>
+</html>

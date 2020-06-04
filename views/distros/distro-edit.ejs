@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Distro: <%=distro.name%></h1>
+    <form action="/distros/<%=distro.id%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=distro.name%>"><br>
+      Members: <input type="text" name="members" value="<%=distro.members%>"><br>
+      confidential: <input type="checkbox" name="confidential" <% if(distro.confidential === true) { %> checked <% } %>>
+      <input type="submit" value="Update Distro">
+    </form>
+    <br><br>
+    <a href="/distros/">Return to Index</a>
+  </body>
+</html>
