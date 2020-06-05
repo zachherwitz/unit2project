@@ -23,6 +23,13 @@
       <input type="submit" value="Create New Contact">
     </form>
     <br><br>
+    <h3>DISTROS:</h3>
+    <% for(let i = 0; i < distros.length; i++){ %>
+      <div>
+        <a href="/distros/<%=distros[i].id%>"><%=distros[i].name%></a><br>
+      </div>
+      <br>
+    <% } %>
     <a href="/contacts/">Return to Index</a>
   </body>
 </html>

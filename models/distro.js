@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
-const contacts = require('./contacts')
+const Contact = require('./contacts')
 
 const distroSchema = new mongoose.Schema(
   {
     name: String,
+    // members: [Contact.schema],
     members: String,
     confidential: Boolean
   }

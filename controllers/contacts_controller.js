@@ -7,6 +7,7 @@
 const express = require('express');
 const contacts = express.Router();
 const Contact = require('../models/contacts.js');
+const Distro = require('../models/distro.js')
 
 const setCheckboxes = (req) => {
   // DEPARTMENT HEAD //
@@ -37,9 +38,14 @@ const setCheckboxes = (req) => {
 
 // NEW //
 contacts.get('/new', (req, res) => {
-  res.render(
-    'contacts/contacts-new.ejs'
-  )
+  Distro.find({}, (error, allDistros) => {
+    res.render(
+      'contacts/contacts-new.ejs',
+      {
+        distros: allDistros
+      }
+    )
+  })
 })
 
 // EDIT //
