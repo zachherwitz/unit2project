@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const contacts = require('./contacts')
 
 const distroSchema = new mongoose.Schema(
   {
