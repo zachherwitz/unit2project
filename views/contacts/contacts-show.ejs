@@ -2,9 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- ============ HEAD ============ -->
+    <%- include ('../partials/head.ejs') %>
+    <!-- ============/HEAD ============ -->
+    <link rel="stylesheet" href="/css/showcontact.css">
     <title></title>
   </head>
   <body>
+    <div class="header-container">
+      <!-- ============ HEADER ============ -->
+      <%- include ('../partials/header.ejs') %>
+      <!-- ============/HEADER ============ -->
+    </div>
     <h1>Contact Page: <%=contact.name%></h1>
     <h2>Full Information:</h2>
     name: <%=contact.name%><br>

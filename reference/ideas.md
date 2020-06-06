@@ -71,3 +71,34 @@ Stretch Functionality:
 
 ### dISPLAY
 ![distro-wireframe-basic.png](distro-wireframe-basic.png)
+
+
+
+
+
+EXTRAS:
+distro - app for emailing things out with less anxiety
+
+- asks you if you're sure before sending out the email / populating the emailing
+- lets you review the members of the distro group
+- identifies members with certain tags to ask for extra confirmation
+
+- build contacts database
+- link distro list database? Can this be done with one model?
+- create email population user experience (are you sure's, btl/atl confirmation, certain people in certain color font)
+- figure out authentication
+- focus on new user onboarding
+- search functionality?
+
+
+for now, the basic structure should go:
+log in
+click a button to create a new contact
+click a button to see all contacts
+click a button to edit a contact
+click a button to begin a new email to a distro group
+click a button to build a new distro group
+click a button to edit a distro group
+
+can i get away with not using a second model? what if i just have tags and you can add tags
+and those tags are the distro groups. you could then just pull from those objects and when you wanna email the call sheet distro, you just do a find all query of all documents that have that tag as 'true' and then return the email addresses/ whatever information you want

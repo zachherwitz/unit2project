@@ -2,9 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- ============ HEAD ============ -->
+    <%- include ('../partials/head.ejs') %>
+    <!-- ============/HEAD ============ -->
     <title></title>
   </head>
   <body>
+    <div class="header-container">
+      <!-- ============ HEADER ============ -->
+      <%- include ('../partials/header.ejs') %>
+      <!-- ============/HEADER ============ -->
+    </div>
     <h1>NEW DISTRO</h1>
     <form action="/distros" method="POST">
       Name: <input type="text" name="name">
