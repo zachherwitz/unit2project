@@ -1,4 +1,14 @@
 /* Specific SHOW PAGE Styles */
-body {
-  background: salmon;
+.contact-name {
+  font-size: 10vw;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container {
+  border: 1px solid black;
+  margin: 5px 0;
 }
