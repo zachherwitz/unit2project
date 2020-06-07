@@ -18,7 +18,7 @@ const Contact = require('../models/contacts.js');
 // SHOW //
 distros.get('/:id', (req, res) => {
   Contact.find({'distros': {'$regex': req.params.id}}, (error, showDistro) => {
-    console.log(showDistro);
+    // console.log(showDistro);
     res.render(
       'distros/distro-show.ejs',
       {

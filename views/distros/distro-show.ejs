@@ -5,6 +5,7 @@
     <!-- ============ HEAD ============ -->
     <%- include ('../partials/head.ejs') %>
     <!-- ============/HEAD ============ -->
+    <script src="/js/distro-show.js" charset="utf-8"></script>
     <title></title>
   </head>
   <body>
@@ -15,9 +16,15 @@
     </div>
     <h1><%=distroName%> DISTRO LIST</h1>
     <div class="">
+      <% let emailAddresses = [] %>
       <% for(let i = 0; i < distro.length; i++){ %>
         <a href="../contacts/<%=distro[i].id%>"><%=distro[i].name%></a>
+        <% emailAddresses.push(distro[i].email) %>
       <% } %>
+      <% let emails = emailAddresses.join() %>
+      <div id="distroName" style="display: none"><%=distroName%></div>
+      <div id="emails"><%=emails%></div>
+      <br><br>
     </div>
   </body>
 </html>
