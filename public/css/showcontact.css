@@ -8,18 +8,6 @@
   width: 80%;
 }
 
-.art {
-  background-color: #9068be;
-}
-
-.production {
-  background-color: #6ed3cf;
-}
-
-.director {
-  background-color: #b56969;
-}
-
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -28,4 +16,22 @@
 .info-container {
   /* border: 1px solid black; */
   margin: 5px 0;
+}
+
+/* DEPARTMENTS */
+.art {
+  background-color: #9068be;
+}
+
+.production {
+  background-color: #6ed3cf;
+}
+
+/* DISTROS */
+.callsheet {
+  color: red;
+}
+
+.preproductionschedule {
+  color: purple;
 }
