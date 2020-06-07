@@ -110,3 +110,16 @@ and those tags are the distro groups. you could then just pull from those object
 So I have a few ways of populating the system:
 the user can add a contact one at a time
 user can create multiple contacts at once based on a single tag + name
+
+
+TODO::
+SUNDAY
+1. Adjust Edit Page
+2. Main Index Dynamic 'Search' Page
+3. Styling/Overall UIUX
+MONDAY
+1. Populate Email Page
+2. Authentication
+3. Styling/Page by Page
+TUESDAY
+1. jsPDF

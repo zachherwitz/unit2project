@@ -106,6 +106,8 @@ $(() => {
 
   $arrayOfInputs[0].appendTo($form).focus()
 
+  let distrosArray = []
+
   // APPEND NEXT INPUT
   const appendNextInput = () => {
     $form.children().hide(); // detach current input field
@@ -114,10 +116,8 @@ $(() => {
       $arrayOfInputs[0].appendTo($form) // append the input to the form
       $('input').next().focus() // focus the input
     } else {
-      console.log('error, no more input fields!');
+      console.log('ready to hatch!');
       console.log(contactObject);
-      // $form.append(
-      //   $nameInput, $titleInput, $departmentInput, $phoneInput, $emailInput).children().hide()
       let $submitButton = $('<input>')
                           .attr({
                             'type': 'submit',
@@ -138,9 +138,12 @@ $(() => {
       if(event.target.type === 'text') {
         if(event.target.name === 'distros') {
           let distrosString = event.target.value.replace(/\s/g,'')
-          let distrosArray = distrosString.split('|')
-          contactObject[objectKey] = distrosArray
+          distrosArray = distrosString.split('|')
+          for (let i = 0; i < distrosArray.length; i++) {
+            $('<input>').attr({'type': 'text', 'name': 'distros', 'value': `${distrosArray[i]}`}).appendTo($form)
+          }
           targetValue = distrosArray
+          $('#distrosInputField').detach()
         } else {
           targetValue = event.target.value; // saves the current text in the input field to targetValue
           contactObject[objectKey] = targetValue // add input data to the object
