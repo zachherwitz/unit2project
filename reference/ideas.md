@@ -114,7 +114,7 @@ user can create multiple contacts at once based on a single tag + name
 
 TODO::
 SUNDAY
-1. Adjust Edit Page
+1. Adjust Edit Page (overhaul)
 2. Main Index Dynamic 'Search' Page
 3. Styling/Overall UIUX
 MONDAY

@@ -56,8 +56,8 @@ app.use(methodOverride('_method'))
 const contactsController = require('./controllers/contacts_controller.js')
 app.use('/contacts', contactsController)
 
-// const distrosController = require('./controllers/distros_controller.js')
-// app.use('/distros', distrosController)
+const distrosController = require('./controllers/distros_controller.js')
+app.use('/distros', distrosController)
 
 // routes
 app.get('/', (req, res) => {

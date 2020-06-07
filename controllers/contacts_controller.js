@@ -7,7 +7,6 @@
 const express = require('express');
 const contacts = express.Router();
 const Contact = require('../models/contacts.js');
-const Distro = require('../models/distro.js')
 
 // const setCheckboxes = (req) => {
 //   // DEPARTMENT HEAD //
