@@ -1,12 +1,23 @@
 /* Specific SHOW PAGE Styles */
 .contact-name {
   font-size: 10vw;
-  background-color: #9068be;
   color: white;
   border-top-left-radius: 20px;
   padding: 5px 5px 5px 15px;
   margin-bottom: 15px;
   width: 80%;
+}
+
+.art {
+  background-color: #9068be;
+}
+
+.production {
+  background-color: #6ed3cf;
+}
+
+.director {
+  background-color: #b56969;
 }
 
 .contact-container {

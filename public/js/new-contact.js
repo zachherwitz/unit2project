@@ -69,6 +69,7 @@ $(() => {
                     .keydown((event) => {
                       checkIfEnterPressed(event, 'phone')
                     })
+
   let $emailInput = $('<input>')
                     .attr({
                       'type': 'text',
@@ -81,13 +82,26 @@ $(() => {
                       checkIfEnterPressed(event, 'email')
                     })
 
+  let $distrosInput = $('<input>')
+                    .attr({
+                      'type': 'text',
+                      'name': 'distros',
+                      'id': 'distrosInputField',
+                      'placeholder': 'add some distros',
+                      'autocomplete': 'off'
+                    })
+                    .keydown((event) => {
+                      checkIfEnterPressed(event, 'distros')
+                    })
+
 
   let $arrayOfInputs = [
     $nameInput,
     $titleInput,
     $departmentInput,
     $phoneInput,
-    $emailInput
+    $emailInput,
+    $distrosInput
   ]
 
   $arrayOfInputs[0].appendTo($form).focus()
@@ -120,9 +134,17 @@ $(() => {
       event.preventDefault(); // prevents default input behavior
       let targetValue;
       // IF TEXT INPUT //
-      if (event.target.type === 'text') {
-        targetValue = event.target.value; // saves the current text in the input field to targetValue
-        contactObject[objectKey] = targetValue // add input data to the object
+      // console.log(event.target);
+      if(event.target.type === 'text') {
+        if(event.target.name === 'distros') {
+          let distrosString = event.target.value.replace(/\s/g,'')
+          let distrosArray = distrosString.split('|')
+          contactObject[objectKey] = distrosArray
+          targetValue = distrosArray
+        } else {
+          targetValue = event.target.value; // saves the current text in the input field to targetValue
+          contactObject[objectKey] = targetValue // add input data to the object
+        }
       }
       appendNextInput() // next input field appears
       updateNametag(objectKey, targetValue) // update name tag

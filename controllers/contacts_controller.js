@@ -53,6 +53,7 @@ contacts.delete('/:id', (req, res) => {
 // SHOW //
 contacts.get('/:id', (req, res) => {
   Contact.findById(req.params.id, (error, showContact) => {
+    // console.log(showContact.department);
     res.render(
       'contacts/contacts-show.ejs',
       {

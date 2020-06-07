@@ -14,8 +14,8 @@
       <%- include ('../partials/header.ejs') %>
       <!-- ============/HEADER ============ -->
     </div>
-    <div class="contact-name"><%=contact.name%></div>
-    <div class="">Full Information:</div>
+    <div class="contact-name <%=contact.department%>"><%=contact.name%></div>
+    <div class="">Full Information: </div>
     <div class="contact-container">
       <div class="department-info info-container">
         department: <%=contact.department%><br>
@@ -25,7 +25,9 @@
         phone: <%=contact.phone%><br>
         email: <%=contact.email%><br>
       </div>
-
+      <div class="distros-info info-container">
+        distros: <%=contact.distros%><br>
+      </div>
     </div>
     <br><br>
     <a href="/contacts/<%=contact.id%>/edit">Edit Contact</a>
