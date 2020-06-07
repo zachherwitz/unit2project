@@ -6,8 +6,7 @@ $(() => {
     let emailAddresses = $('#emails').text();
     let emailSubject = $('#distroName').text();
     // console.log(emailAddresses, emailSubject);
-    window.location.href = `mailto:${emailAddresses}?subject=${emailSubject}`
-
+    window.open(`mailto:${emailAddresses}?subject=${emailSubject}`)
   }
 
   const $populateEmailButton = $('<button>')
@@ -16,6 +15,7 @@ $(() => {
                                   populateEmails()
                                 })
                                 .appendTo('body')
-
-
+                                .attr(
+                                  "target", "_blank"
+                                )
 })
