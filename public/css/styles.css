@@ -28,6 +28,12 @@ header li {
 }
 
 /* LOGO */
+
+header a {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+}
+
 .logo {
   flex-grow: 2;
   font-size: 2em;

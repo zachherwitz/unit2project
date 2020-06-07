@@ -118,8 +118,8 @@ SUNDAY
 2. Main Index Dynamic 'Search' Page
 3. Styling/Overall UIUX
 MONDAY
-1. Populate Email Page
+<!-- 1. Populate Email Page -->
+1. jsPDF
 2. Authentication
 3. Styling/Page by Page
 TUESDAY
-1. jsPDF

@@ -130,6 +130,7 @@ $(() => {
 
   // ON ENTER PRESS
   const checkIfEnterPressed = (event, objectKey) => {
+    updateLiveTyping(event, objectKey)
     if(event.code === 'Enter') { // Checks to see if the button pressed is 'enter'
       event.preventDefault(); // prevents default input behavior
       let targetValue;
@@ -154,9 +155,15 @@ $(() => {
     }
   }
 
-    // UPDATE NAMETAG
-    const updateNametag = (objectKey, targetValue) => {
-      // append a new div with the objectkey and targetvalue
-      $(`#nametag-${objectKey}`).text(`${objectKey}: ${targetValue}`)
-    }
+  // UPDATE NAMETAG
+  const updateLiveTyping = (event, objectKey) => {
+    $(event.target).keyup(() => {
+      $(`#nametag-${objectKey}`).text($(event.target).val())
+    })
+  }
+
+  const updateNametag = (objectKey, targetValue) => {
+    // append a new div with the objectkey and targetvalue
+    $(`#nametag-${objectKey}`).text(`${objectKey}: ${targetValue}`)
+  }
 })
