@@ -26,13 +26,24 @@ $(() => {
                       'type': 'text',
                       'name': 'name',
                       'id': 'nameInputField',
-                      'placeholder': 'try typing a name',
+                      'placeholder': 'try typing a name and hitting enter',
                       'autocomplete': 'off'
                     })
                     .keydown((event) => {
                       checkIfEnterPressed(event, 'name')
                     })
 
+  let $titleInput = $('<input>')
+                    .attr({
+                      'type': 'text',
+                      'name': 'title',
+                      'id': 'titleInputField',
+                      'placeholder': 'what is their title? be specific!',
+                      'autocomplete': 'off'
+                    })
+                    .keydown((event) => {
+                      checkIfEnterPressed(event, 'title')
+                    })
 
   let $departmentInput = $('<input>')
                     .attr({
@@ -44,18 +55,6 @@ $(() => {
                     })
                     .keydown((event) => {
                       checkIfEnterPressed(event, 'department')
-                    })
-
-  let $titleInput = $('<input>')
-                    .attr({
-                      'type': 'text',
-                      'name': 'title',
-                      'id': 'titleInputField',
-                      'placeholder': 'what is their title?',
-                      'autocomplete': 'off'
-                    })
-                    .keydown((event) => {
-                      checkIfEnterPressed(event, 'title')
                     })
 
   let $phoneInput = $('<input>')
@@ -87,7 +86,7 @@ $(() => {
                       'type': 'text',
                       'name': 'distros',
                       'id': 'distrosInputField',
-                      'placeholder': 'add some distros',
+                      'placeholder': 'add distros. seperate each distro with a " | "',
                       'autocomplete': 'off'
                     })
                     .keydown((event) => {
@@ -130,13 +129,18 @@ $(() => {
 
   // ON ENTER PRESS
   const checkIfEnterPressed = (event, objectKey) => {
-    updateLiveTyping(event, objectKey)
+    if(event.target.name !== 'name') {
+      updateLiveTyping(event, objectKey)
+    }
     if(event.code === 'Enter') { // Checks to see if the button pressed is 'enter'
       event.preventDefault(); // prevents default input behavior
       let targetValue;
       // IF TEXT INPUT //
       // console.log(event.target);
       if(event.target.type === 'text') {
+        if(event.target.name === 'name') {
+          $('#nametag').animate({'height': '60vh'})
+        }
         if(event.target.name === 'distros') {
           let distrosString = event.target.value.replace(/\s/g,'')
           distrosArray = distrosString.split('|')
@@ -164,6 +168,10 @@ $(() => {
 
   const updateNametag = (objectKey, targetValue) => {
     // append a new div with the objectkey and targetvalue
-    $(`#nametag-${objectKey}`).text(`${objectKey}: ${targetValue}`)
+    if (objectKey !== 'name'){
+      $(`#nametag-${objectKey}`).text(`${objectKey}: ${targetValue}`)
+    } else {
+      $(`#nametag-${objectKey}`).text(`${targetValue}`)
+    }
   }
 })

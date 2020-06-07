@@ -15,15 +15,13 @@
     </div>
     <h1>Edit Contact: <%=contact.name%></h1>
     <form action="/contacts/<%=contact.id%>?_method=PUT" method="POST">
+
+
       Name: <input type="text" name="name" value="<%=contact.name%>"><br>
-      Department: <input type="text" name="department" value="<%=contact.department%>"><br>
       Title: <input type="text" name="title" value="<%=contact.title%>"><br>
-      Department Head? <input type="checkbox" name="departmentHead" <% if(contact.departmentHead === true) { %> checked <% } %>><br>
+      Department: <input type="text" name="department" value="<%=contact.department%>"><br>
       Phone: <input type="tel" name="phone" value="<%=contact.phone%>"><br>
       Email: <input type="email" name="email" value="<%=contact.email%>"><br>
-      BTL: <input type="checkbox" name="btl" <% if(contact.btl === true) { %> checked <% } %>><br>
-      CORE: <input type="checkbox" name="core" <% if(contact.core === true) { %> checked <% } %>><br>
-      <br>
       Emergency Contact:<br>
       Contact Name: <input type="text" name="emergencyContactName" value="<%=contact.emergencyContactName%>"><br>
       Phone: <input type="tel" name="emergencyContactNumber" value="<%=contact.emergencyContactNumber%>"><br>

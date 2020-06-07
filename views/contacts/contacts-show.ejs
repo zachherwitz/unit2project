@@ -17,18 +17,23 @@
     <div class="contact-name <%=contact.department%>"><%=contact.name%></div>
     <div class="">Full Information: </div>
     <div class="contact-container">
-      <div class="department-info info-container">
-        department: <%=contact.department%><br>
-        title: <%=contact.title%><br>
-      </div>
-      <div class="contact-info info-container">
-        phone: <%=contact.phone%><br>
-        email: <%=contact.email%><br>
-      </div>
+      department: <%=contact.department%><br>
+      title: <%=contact.title%><br>
+      phone: <%=contact.phone%><br>
+      email: <%=contact.email%><br>
+      <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
+        <div class="emergency-container">
+          Emergency Contact Information: <br>
+          E - name: <%=contact.emergencyContactName%><br>
+          E - number: <%=contact.emergencyContactNumber%><br>
+          <% if (contact.emergencyContactRelationship) { %>
+            E - relationship: <%=contact.emergencyContactRelationship%><br>
+          <% } %>
+        </div>
+      <% } %>
       <div class="distros-info info-container">DISTROS:
         <% for(let i = 0; i < contact.distros.length; i++){ %>
           <a class="distro <%=contact.distros[i]%>" href="../distros/<%=contact.distros[i]%>"><%=contact.distros[i]%></a>
-          <!-- <div class="distro <%=contact.distros[i]%>"><%=contact.distros[i]%><br></div> -->
         <% } %>
       </div>
     </div>

@@ -11,7 +11,9 @@ form {
 
 input {
   width: 80%;
-  height: 5vh;
+  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 1.5em;
   outline: none;
   border: none;
@@ -29,7 +31,36 @@ input:focus {
   border: none;
 }
 
+/* NAMETAG STYLING */
 .nametag {
-  /* border: 4px solid magenta; */
-  height: 20vh;
+  border: 1px solid magenta;
+  width: 95%;
+  margin: 0 auto;
+  height: 0vh;
+  /* background-image: url('/images/card-outline.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+
+#nametag-name {
+  border: 1px solid red;
+  font-family: 'Thasadith', serif;
+  font-size: 2em;
+}
+
+#nametag-title {
+  border: 1px solid orange;
+}
+
+#nametag-department {
+  border: 1px solid yellow;
+}
+
+#nametag-email {
+  border: 1px solid green;
+}
+
+#nametag-distros {
+  border: 1px solid blue;
 }
