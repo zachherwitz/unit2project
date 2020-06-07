@@ -102,3 +102,11 @@ click a button to edit a distro group
 
 can i get away with not using a second model? what if i just have tags and you can add tags
 and those tags are the distro groups. you could then just pull from those objects and when you wanna email the call sheet distro, you just do a find all query of all documents that have that tag as 'true' and then return the email addresses/ whatever information you want
+
+
+
+
+
+So I have a few ways of populating the system:
+the user can add a contact one at a time
+user can create multiple contacts at once based on a single tag + name
