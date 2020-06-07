@@ -9,26 +9,14 @@ const contacts = express.Router();
 const Contact = require('../models/contacts.js');
 const Distro = require('../models/distro.js')
 
-const setCheckboxes = (req) => {
-  // DEPARTMENT HEAD //
-  if(req.body.departmentHead === 'on') {
-    req.body.departmentHead = true;
-  } else {
-    req.body.departmentHead = false;
-  }
-  // BTL //
-  if(req.body.btl === 'on') {
-    req.body.btl = true;
-  } else {
-    req.body.btl = false;
-  }
-  // CORE CREW //
-  if(req.body.core === 'on') {
-    req.body.core = true;
-  } else {
-    req.body.core = false;
-  }
-}
+// const setCheckboxes = (req) => {
+//   // DEPARTMENT HEAD //
+//   if(req.body.departmentHead === 'on') {
+//     req.body.departmentHead = true;
+//   } else {
+//     req.body.departmentHead = false;
+//   }
+// }
 
 //zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
 //                                                                          //
@@ -38,14 +26,9 @@ const setCheckboxes = (req) => {
 
 // NEW //
 contacts.get('/new', (req, res) => {
-  Distro.find({}, (error, allDistros) => {
-    res.render(
-      'contacts/contacts-new.ejs',
-      {
-        distros: allDistros
-      }
-    )
-  })
+  res.render(
+    'contacts/contacts-new.ejs'
+  )
 })
 
 // EDIT //
@@ -81,7 +64,7 @@ contacts.get('/:id', (req, res) => {
 
 // UPDATE //
 contacts.put('/:id', (req, res) => {
-  setCheckboxes(req)
+  // setCheckboxes(req)
   Contact.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedContact) => {
     console.log(updatedContact)
     res.redirect('/contacts')
@@ -90,7 +73,8 @@ contacts.put('/:id', (req, res) => {
 
 // CREATE //
 contacts.post('/', (req, res) => {
-  setCheckboxes(req)
+  // setCheckboxes(req)
+  // res.send(req.body)
   Contact.create(req.body, (error, newContact) => {
     console.log(newContact)
     res.redirect('/contacts');

@@ -5,6 +5,8 @@
     <!-- ============ HEAD ============ -->
     <%- include ('../partials/head.ejs') %>
     <!-- ============/HEAD ============ -->
+    <link rel="stylesheet" href="/css/newcontact.css">
+    <script src="/js/new-contact.js" charset="utf-8"></script>
     <title></title>
   </head>
   <body>
@@ -13,31 +15,14 @@
       <%- include ('../partials/header.ejs') %>
       <!-- ============/HEADER ============ -->
     </div>
-    <h1>NEW CONTACT</h1>
+    <div class="nametag" id="nametag">
+      <div id="nametag-name"></div>
+      <div id="nametag-title"></div>
+      <div id="nametag-department"></div>
+      <div id="nametag-phone"></div>
+      <div id="nametag-email"></div>
+    </div>
     <form action="/contacts" method="POST">
-      Name: <input type="text" name="name"><br>
-      Department: <input type="text" name="department"><br>
-      Title: <input type="text" name="title"><br>
-      Department Head? <input type="checkbox" name="departmentHead"><br>
-      Phone: <input type="tel" name="phone"><br>
-      Email: <input type="email" name="email"><br>
-      BTL: <input type="checkbox" name="btl"><br>
-      CORE: <input type="checkbox" name="core"><br>
-      <br>
-      Emergency Contact:<br>
-      Contact Name: <input type="text" name="emergencyContactName"><br>
-      Phone: <input type="tel" name="emergencyContactNumber"><br>
-      Relationship: <input type="text" name="emergencyContactRelationship"><br><br>
-      <input type="submit" value="Create New Contact">
     </form>
-    <br><br>
-    <h3>DISTROS:</h3>
-    <% for(let i = 0; i < distros.length; i++){ %>
-      <div>
-        <a href="/distros/<%=distros[i].id%>"><%=distros[i].name%></a><br>
-      </div>
-      <br>
-    <% } %>
-    <a href="/contacts/">Return to Index</a>
   </body>
 </html>

@@ -3,16 +3,14 @@ const mongoose = require('mongoose');
 const contactSchema = new mongoose.Schema(
   {
     name: String,
-    department: String,
     title: String,
-    departmentHead: Boolean,
+    department: String,
     phone: String,
     email: String,
     emergencyContactName: String,
     emergencyContactNumber: String,
     emergencyContactRelationship: String,
-    btl: Boolean,
-    core: Boolean
+    distros: [String]
   }
 )
 
