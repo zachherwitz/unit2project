@@ -1,6 +1,6 @@
 $(() => {
 
-  // $('.distros-container').children().remove();
+  
 
   const addDistro = () => {
     console.log('adding distro');

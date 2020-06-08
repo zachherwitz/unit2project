@@ -66,7 +66,7 @@ contacts.put('/:id', (req, res) => {
   // setCheckboxes(req)
   Contact.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedContact) => {
     console.log(updatedContact)
-    res.redirect('/contacts')
+    res.redirect('/contacts/' + req.params.id)
   })
 })
 

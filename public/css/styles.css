@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   border: 2px solid red;
   background-color: white;
-  height: 80vh;
+  height: 85vh;
 }
 
 /* NAV STYLES */
@@ -45,18 +45,18 @@ header a {
 .logo {
   font-size: 3vw;
   letter-spacing: 5px;
-  font-family: 'Thasadith';
+  font-family: 'Maven Pro';
   /* border: 5px solid black; */
 }
 
 .logo-pipe {
   font-size: 1.3em;
-  font-family: 'Thasadith';
+  font-family: 'Maven Pro';
 }
 
 .logo-str {
   letter-spacing: 10px;
-  font-family: 'Thasadith';
+  font-family: 'Maven Pro';
   transition: 1s;
 }
 
@@ -66,11 +66,12 @@ header a {
 }
 
 .logo-o {
-  font-family: 'Thasadith';
+  font-family: 'Maven Pro';
+  font-weight: 600;
   /* border: 1px solid black; */
   transition: .5s;
   animation-timing-function: ease-in;
-  color: #f9e039;
+  color: #EAB003;
   padding: 50px 50px 50px 0;
 }
 

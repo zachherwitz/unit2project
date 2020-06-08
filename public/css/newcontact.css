@@ -34,7 +34,6 @@ input:focus {
 /* NAMETAG STYLING */
 .nametag {
   border: 1px solid magenta;
-  width: 95%;
   margin: 0 auto;
   height: 0vh;
   /* background-image: url('/images/card-outline.png');
@@ -45,10 +44,10 @@ input:focus {
 
 #nametag-name {
   border: 1px solid red;
-  font-family: 'Thasadith', serif;
+  font-family: 'Maven Pro', sans-sans-serif;
   font-size: 10vw;
   color: white;
-  background-color: #9068be;
+  background-color: #EAB003;
   border-top-left-radius: 20px;
   padding: 5px 5px 5px 15px;
   margin-bottom: 15px;

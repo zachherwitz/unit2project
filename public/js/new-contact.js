@@ -171,7 +171,7 @@ $(() => {
     if (objectKey !== 'name'){
       $(`#nametag-${objectKey}`).text(`${objectKey}: ${targetValue}`)
     } else {
-      $(`#nametag-${objectKey}`).text(`${targetValue}`)
+      $(`#nametag-${objectKey}`).text(`${targetValue.toLowerCase()}`)
     }
   }
 })

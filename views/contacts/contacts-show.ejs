@@ -5,6 +5,7 @@
     <!-- ============ HEAD ============ -->
     <%- include ('../partials/head.ejs') %>
     <!-- ============/HEAD ============ -->
+    <script src="/js/show-contact.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/css/showcontact.css">
     <title></title>
   </head>
@@ -14,36 +15,42 @@
       <%- include ('../partials/header.ejs') %>
       <!-- ============/HEADER ============ -->
     </div>
-    <div class="contact-name <%=contact.department%>"><%=contact.name%></div>
-    <div class="">Full Information: </div>
-    <div class="contact-container">
-      department: <%=contact.department%><br>
-      title: <%=contact.title%><br>
-      phone: <%=contact.phone%><br>
-      email: <%=contact.email%><br>
-      <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
-        <div class="emergency-container">
-          Emergency Contact Information: <br>
-          E - name: <%=contact.emergencyContactName%><br>
-          E - number: <%=contact.emergencyContactNumber%><br>
-          <% if (contact.emergencyContactRelationship) { %>
-            E - relationship: <%=contact.emergencyContactRelationship%><br>
+    <div class="site-container">
+      <div class="contact-container">
+        <div class="contact-name" id="contact-name"><%=contact.name.toLowerCase()%></div>
+        <div class="info-container">
+          <div class="photo-container"></div>
+          <div class="text-container">
+            department: <%=contact.department%><br>
+            title: <%=contact.title%><br>
+            phone: <%=contact.phone%><br>
+            email: <a href="mailto:<%=contact.email%>" target="_blank"><%=contact.email%></a><br>
+            <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
+            <div class="emergency-container">
+              Emergency Contact Information: <br>
+              E - name: <%=contact.emergencyContactName%><br>
+              E - number: <%=contact.emergencyContactNumber%><br>
+              <% if (contact.emergencyContactRelationship) { %>
+                E - relationship: <%=contact.emergencyContactRelationship%><br>
+              <% } %>
+            </div>
+            <% } %>
+          </div>
+        </div>
+        <div class="distros-info">DISTROS:
+          <% for(let i = 0; i < contact.distros.length; i++){ %>
+            <a class="distro <%=contact.distros[i]%>" href="../distros/<%=contact.distros[i]%>"><%=contact.distros[i]%></a>
           <% } %>
         </div>
-      <% } %>
-      <div class="distros-info info-container">DISTROS:
-        <% for(let i = 0; i < contact.distros.length; i++){ %>
-          <a class="distro <%=contact.distros[i]%>" href="../distros/<%=contact.distros[i]%>"><%=contact.distros[i]%></a>
-        <% } %>
       </div>
+      <br><br>
+      <a href="/contacts/<%=contact.id%>/edit">Edit Contact</a>
+      <br><br>
+      <form action="/contacts/<%=contact.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE">
+      </form>
+      <br><br>
+      <a href="/contacts/">Return to Index</a>
     </div>
-    <br><br>
-    <a href="/contacts/<%=contact.id%>/edit">Edit Contact</a>
-    <br><br>
-    <form action="/contacts/<%=contact.id%>?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE">
-    </form>
-    <br><br>
-    <a href="/contacts/">Return to Index</a>
   </body>
 </html>
