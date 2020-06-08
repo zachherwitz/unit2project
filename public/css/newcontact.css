@@ -46,7 +46,12 @@ input:focus {
 #nametag-name {
   border: 1px solid red;
   font-family: 'Thasadith', serif;
-  font-size: 2em;
+  font-size: 10vw;
+  color: white;
+  background-color: #9068be;
+  border-top-left-radius: 20px;
+  padding: 5px 5px 5px 15px;
+  margin-bottom: 15px;
 }
 
 #nametag-title {

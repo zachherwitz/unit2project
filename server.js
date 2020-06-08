@@ -61,7 +61,7 @@ app.use('/distros', distrosController)
 
 // routes
 app.get('/', (req, res) => {
-  res.redirect('/contacts')
+  res.render('splash.ejs')
 })
 
 //zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
