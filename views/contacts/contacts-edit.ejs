@@ -5,6 +5,8 @@
     <!-- ============ HEAD ============ -->
     <%- include ('../partials/head.ejs') %>
     <!-- ============/HEAD ============ -->
+    <link rel="stylesheet" href="/css/editcontact.css">
+    <script src="/js/edit-contact.js" charset="utf-8"></script>
     <title></title>
   </head>
   <body>
@@ -15,8 +17,6 @@
     </div>
     <h1>Edit Contact: <%=contact.name%></h1>
     <form action="/contacts/<%=contact.id%>?_method=PUT" method="POST">
-
-
       Name: <input type="text" name="name" value="<%=contact.name%>"><br>
       Title: <input type="text" name="title" value="<%=contact.title%>"><br>
       Department: <input type="text" name="department" value="<%=contact.department%>"><br>
@@ -27,9 +27,11 @@
       Phone: <input type="tel" name="emergencyContactNumber" value="<%=contact.emergencyContactNumber%>"><br>
       Relationship: <input type="text" name="emergencyContactRelationship" value="<%=contact.emergencyContactRelationship%>"><br><br>
       <br><br><br>
-      <% for(let i = 0; i < contact.distros.length; i++){ %>
-        distro: <input type="text" name="distros" value="<%=contact.distros[i]%>"><br><br>
-      <% } %>
+      <div class="distros-container">
+        <% for(let i = 0; i < contact.distros.length; i++){ %>
+          distro: <input class="distro-input" type="text" name="distros" value="<%=contact.distros[i]%>"><br><br>
+        <% } %>
+      </div>
       <input type="submit" value="Update Contact">
     </form>
     <br><br>

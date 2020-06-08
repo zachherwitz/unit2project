@@ -70,6 +70,7 @@ header a {
   /* border: 1px solid black; */
   transition: .5s;
   animation-timing-function: ease-in;
+  color: #f9e039;
   padding: 50px 50px 50px 0;
 }
 

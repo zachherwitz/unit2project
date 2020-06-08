@@ -1,0 +1,32 @@
+.distro-input {
+  border: 2px solid green;
+}
+
+.distros-container {
+  border: 2px solid thistle;
+}
+
+.add-distro-button {
+  border: 2px solid black;
+  background: seashell;
+  height: 5vw;
+  width: 5vw;
+}
+
+.new-input {
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+  outline: none;
+  border: none;
+  /* border: 4px solid teal; */
+  opacity: 70%;
+  padding: 0 10px;
+  font-family: 'Thasadith', serif;
+}
+
+.new-input:focus {
+  outline: none;
+}

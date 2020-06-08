@@ -113,11 +113,15 @@ user can create multiple contacts at once based on a single tag + name
 
 
 TODO::
-SUNDAY
-1. Main Index Dynamic 'Search' Page
-2. Styling/Overall UIUX
 MONDAY
-1. Batch Create
-2. Authentication
-3. Styling/Page by Page
+1. Edit Page
+  1. 'Add Distro' Functionality
+2. Index Page
+  1. Display all Distros
+  2. Button to Display
+3. Show/New Page
+  1. Format Contact Card on Show Page
+  2. Format Contact Card preview on New Page
 TUESDAY
+1. Write up README
+2. STYLING!
