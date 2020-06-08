@@ -114,12 +114,10 @@ user can create multiple contacts at once based on a single tag + name
 
 TODO::
 SUNDAY
-1. Adjust Edit Page (overhaul)
-2. Main Index Dynamic 'Search' Page
-3. Styling/Overall UIUX
+1. Main Index Dynamic 'Search' Page
+2. Styling/Overall UIUX
 MONDAY
-<!-- 1. Populate Email Page -->
-1. jsPDF
+1. Batch Create
 2. Authentication
 3. Styling/Page by Page
 TUESDAY

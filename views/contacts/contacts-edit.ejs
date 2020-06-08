@@ -26,6 +26,10 @@
       Contact Name: <input type="text" name="emergencyContactName" value="<%=contact.emergencyContactName%>"><br>
       Phone: <input type="tel" name="emergencyContactNumber" value="<%=contact.emergencyContactNumber%>"><br>
       Relationship: <input type="text" name="emergencyContactRelationship" value="<%=contact.emergencyContactRelationship%>"><br><br>
+      <br><br><br>
+      <% for(let i = 0; i < contact.distros.length; i++){ %>
+        distro: <input type="text" name="distros" value="<%=contact.distros[i]%>"><br><br>
+      <% } %>
       <input type="submit" value="Update Contact">
     </form>
     <br><br>

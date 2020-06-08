@@ -3,13 +3,19 @@
 }
 
 body {
+  background-color: seashell;
+}
+
+.site-container {
   width: 90vw;
   margin: 0 auto;
+  border: 2px solid red;
+  background-color: white;
+  height: 80vh;
 }
 
 /* NAV STYLES */
 header {
-  margin-bottom: 50px;
   /* border: 5px solid teal; */
 }
 
@@ -23,7 +29,6 @@ header li {
   display: flex;
   align-items: center;
   list-style: none;
-  margin: 0 3vw;
   /* border: 5px solid gold; */
 }
 
@@ -47,7 +52,25 @@ header a {
   font-family: 'Thasadith';
 }
 
-.logo-stro {
-  letter-spacing: 15px;
+.logo-str {
+  letter-spacing: 10px;
   font-family: 'Thasadith';
+  transition: 1s;
+}
+
+.logo-str:hover {
+  letter-spacing:20px;
+  transition: 1s;
+}
+
+.logo-o {
+  font-family: 'Thasadith';
+  transition: 1.5s;
+  padding-right: 50px;
+}
+
+.logo-o:hover {
+  margin-left: 80vw;
+  padding: 0 500px;
+  transition: 10s;
 }

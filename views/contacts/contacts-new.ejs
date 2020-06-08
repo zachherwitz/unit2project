@@ -15,15 +15,16 @@
       <%- include ('../partials/header.ejs') %>
       <!-- ============/HEADER ============ -->
     </div>
-    <div class="nametag" id="nametag">
-      <div id="nametag-name"></div>
-      <div id="nametag-title"></div>
-      <div id="nametag-department"></div>
-      <div id="nametag-phone"></div>
-      <div id="nametag-email"></div>
-      <div id="nametag-distros"></div>
+    <div class="site-container">
+      <div class="nametag" id="nametag">
+        <div id="nametag-name"></div>
+        <div id="nametag-title"></div>
+        <div id="nametag-department"></div>
+        <div id="nametag-phone"></div>
+        <div id="nametag-email"></div>
+        <div id="nametag-distros"></div>
+      </div>
+      <form action="/contacts" method="POST"></form>
     </div>
-    <form action="/contacts" method="POST">
-    </form>
   </body>
 </html>

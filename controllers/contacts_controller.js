@@ -84,10 +84,21 @@ contacts.post('/', (req, res) => {
 // INDEX //
 contacts.get('/', (req, res) => {
   Contact.find({}, (error, allContacts) => {
+    let distroList = [];
+    for (let i = 0; i < allContacts.length; i++) {
+      // console.log(allContacts[i].distros);
+      for (let j = 0; j < allContacts[i].distros.length; j++) {
+        if (allContacts[i].distros[j]) {
+          distroList.push(allContacts[i].distros[j])
+        }
+      }
+    }
+    const filteredList = distroList.filter((v, i, a) => a.indexOf(v) === i);
     res.render(
       'contacts/contacts-index.ejs',
       {
-        contacts: allContacts
+        contacts: allContacts,
+        distros: filteredList
       }
     )
   })

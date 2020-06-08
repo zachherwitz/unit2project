@@ -1,0 +1,13 @@
+.site-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.distro-block {
+  border: 2px solid white;
+  background: salmon;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
