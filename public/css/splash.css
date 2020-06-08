@@ -1,13 +1,13 @@
 .main-container {
   height: 90vh;
   background-image: url("/images/rolodex-colorized.png");
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .main-container {
     height: 90vh;
     width: 100vw;
