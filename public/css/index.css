@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.distros-container {
+  border: 2px solid thistle;
+  display: flex;
+  flex-direction: row;
+}
+
 .distro-block {
   border: 2px solid white;
   background: salmon;

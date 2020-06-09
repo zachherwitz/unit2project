@@ -34,7 +34,7 @@ contacts.get('/new', (req, res) => {
 contacts.get('/:id/edit', (req, res) => {
   Contact.findById(req.params.id, (error, showContact) => {
     res.render(
-      'contacts/contacts-edit.ejs',
+      'contacts/contacts-edit-new.ejs',
       {
         contact: showContact
       }
