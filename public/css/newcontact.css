@@ -1,5 +1,9 @@
 
 /* Specific NEW PAGE Styles */
+* {
+  font-family: 'Maven Pro'
+}
+
 body {
   /* border: 4px solid steelblue; */
 }
@@ -20,7 +24,6 @@ input {
   /* border: 4px solid teal; */
   opacity: 70%;
   padding: 0 10px;
-  font-family: 'Thasadith', serif;
 }
 
 input:focus {
@@ -33,38 +36,42 @@ input:focus {
 
 /* NAMETAG STYLING */
 .nametag {
-  border: 1px solid magenta;
-  margin: 0 auto;
+  /* border: 1px solid magenta; */
   height: 0vh;
-  /* background-image: url('/images/card-outline.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15vh;
+}
+
+.info-container {
+  background-color: #f0dc8d;
+  border-top-right-radius: 20px;
+}
+
+.contact-footer {
+  background-color: #f0dc8d;
+  height: 100px;
+  display: none;
+  justify-content: center;
+  align-items: baseline;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 #nametag-name {
-  border: 1px solid red;
-  font-family: 'Maven Pro', sans-sans-serif;
-  font-size: 10vw;
-  color: white;
+  font-size: 5vw;
   background-color: #EAB003;
+  color: white;
   border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   padding: 5px 5px 5px 15px;
-  margin-bottom: 15px;
+  width: 50%;
+  display: none;
 }
 
-#nametag-title {
-  border: 1px solid orange;
-}
-
-#nametag-department {
-  border: 1px solid yellow;
-}
-
-#nametag-email {
-  border: 1px solid green;
-}
-
-#nametag-distros {
-  border: 1px solid blue;
+.info-container {
+  font-size: 3vw;
+  padding: 5px 5px 5px 15px;
+  display: none;
+  height: 100%;
 }

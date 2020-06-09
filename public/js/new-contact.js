@@ -96,8 +96,8 @@ $(() => {
 
   let $arrayOfInputs = [
     $nameInput,
-    $titleInput,
     $departmentInput,
+    $titleInput,
     $phoneInput,
     $emailInput,
     $distrosInput
@@ -139,7 +139,9 @@ $(() => {
       // console.log(event.target);
       if(event.target.type === 'text') {
         if(event.target.name === 'name') {
-          $('#nametag').animate({'height': '60vh'})
+          $('#nametag').animate({'height': '40vh'})
+          $('#nametag').children().toggle()
+          $('.contact-footer').css({'display': 'flex'})
         }
         if(event.target.name === 'distros') {
           let distrosString = event.target.value.replace(/\s/g,'')

@@ -113,15 +113,10 @@ user can create multiple contacts at once based on a single tag + name
 
 
 TODO::
-MONDAY
-1. Edit Page
-  1. 'Add Distro' Functionality
-2. Index Page
-  1. Display all Distros
-  2. Button to Display
-3. Show/New Page
-  1. Format Contact Card on Show Page
-  2. Format Contact Card preview on New Page
-TUESDAY
-1. Write up README
-2. STYLING!
+1. Show Page Edit/Delete Buttons
+2. Edit Page Styling to be the same as Show Page
+<!-- 3. New Page styling to be the same as Show Page -->
+3. Edit Page Add/Delete Distros Logic
+4. Index Page Styling
+5. Distro/Print Page Styling
+6. Write Up README
