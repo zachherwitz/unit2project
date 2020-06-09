@@ -26,13 +26,15 @@
             phone: <%=contact.phone%><br>
             email: <a href="mailto:<%=contact.email%>" target="_blank"><%=contact.email%></a><br>
             <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
-            <div class="emergency-container">
+            <div id="emergency" class="emergency-container">
               Emergency Contact Information: <br>
-              E - name: <%=contact.emergencyContactName%><br>
-              E - number: <%=contact.emergencyContactNumber%><br>
-              <% if (contact.emergencyContactRelationship) { %>
-                E - relationship: <%=contact.emergencyContactRelationship%><br>
-              <% } %>
+              <div class="emergency-info">
+                E - name: <%=contact.emergencyContactName%><br>
+                E - number: <%=contact.emergencyContactNumber%><br>
+                <% if (contact.emergencyContactRelationship) { %>
+                  E - relationship: <%=contact.emergencyContactRelationship%><br>
+                <% } %>
+              </div>
             </div>
             <% } %>
           </div>
