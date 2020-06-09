@@ -1,7 +1,7 @@
 $(() => {
 
   $('#emergency').click((event) => {
-    $(event.target).children().toggle();
+    $(event.currentTarget).children().toggle();
   })
 
 })
