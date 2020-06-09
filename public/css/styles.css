@@ -95,3 +95,15 @@ header a {
   width: 6vw;
   margin: 0 5vw;
 }
+
+#icon-production {
+  background-image: url('../images/accounting-icon.png');
+  background-size: contain;
+  background-repeat: none;
+}
+
+#icon-art {
+  background-image: url('../images/art-icon.png');
+  background-size: contain;
+  background-repeat: none;
+}

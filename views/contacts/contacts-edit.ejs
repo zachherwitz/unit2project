@@ -55,9 +55,12 @@
             <% } %>
           </div>
           <div class="distro-container">
-            <div class="distros-info">DISTROS:
+            distros:
+            <div class="distro-button-container">
               <% for(let i = 0; i < contact.distros.length; i++){ %>
-                <a class="distro <%=contact.distros[i]%>" href="../../distros/<%=contact.distros[i]%>"><%=contact.distros[i]%></a>
+                <div class="distro-button" id="icon-<%=contact.distros[i]%>">
+                  <input class="icon-input" type="text" name="distros" value="<%=contact.distros[i]%>">
+                </div>
               <% } %>
             </div>
           </div>

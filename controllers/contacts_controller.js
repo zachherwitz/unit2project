@@ -33,10 +33,12 @@ contacts.get('/new', (req, res) => {
 // EDIT //
 contacts.get('/:id/edit', (req, res) => {
   Contact.findById(req.params.id, (error, showContact) => {
+    let contactDistros = showContact.distros.join()
     res.render(
       'contacts/contacts-edit.ejs',
       {
-        contact: showContact
+        contact: showContact,
+        distros: contactDistros
       }
     )
   })

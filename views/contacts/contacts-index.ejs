@@ -16,10 +16,12 @@
       <!-- ============/HEADER ============ -->
     </div>
     <div class="site-container">
-      <div class="distros-container">
+      <div class="distro-container">
         <% for(let i = 0; i < distros.length; i++){ %>
-          <a href="/distros/<%=distros[i]%>">
-            <div class="distro-block"><%=distros[i]%></div>
+          <a class="distro" href="../distros/<%=distros[i]%>">
+            <div class="distro-button" id="icon-<%=distros[i]%>">
+              <div class="distro-name"><%=distros[i]%></div>
+            </div>
           </a>
         <% } %>
       </div>

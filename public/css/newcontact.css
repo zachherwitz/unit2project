@@ -39,6 +39,10 @@ input:focus {
 .info-container {
   background-color: #f0dc8d;
   border-top-right-radius: 20px;
+  font-size: 3vw;
+  padding: 5px 5px 5px 15px;
+  display: none;
+  height: 100%;
 }
 
 #nametag-name {
@@ -70,13 +74,6 @@ input:focus {
 
 .submit-button:hover {
   cursor: pointer;
-}
-
-.info-container {
-  font-size: 3vw;
-  padding: 5px 5px 5px 15px;
-  display: none;
-  height: 100%;
 }
 
 .contact-footer {
