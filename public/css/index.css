@@ -1,3 +1,7 @@
+* {
+  font-family: 'Maven Pro';
+}
+
 .site-container {
   display: flex;
   flex-direction: column;
@@ -8,7 +12,44 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* border: 2px solid yellow; */
 }
+
+.expandables-container {
+  margin-top: 5vh;
+  /* border: 2px solid black; */
+  display: flex;
+}
+
+.contact-expandable {
+  /* border: 2px solid teal; */
+  min-width: 20vw;
+  font-size: 2vw;
+}
+
+#contacts-container-button {
+  text-align: center;
+}
+
+.contacts-buttons-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+#new-contact-button {
+    text-decoration: none;
+    color: black;
+}
+
+.contact-container {
+  /* border: 2px solid orange; */
+}
+
+.distro-expandable {
+  /* border: 2px solid purple; */
+  font-size: 2vw;
+}
+
 
 .distro {
   /* border: 2px solid green; */
