@@ -116,6 +116,7 @@ TODO::
 <!-- 1. Show Page Edit/Delete Buttons -->
 <!-- 2. Edit Page Styling to be the same as Show Page -->
 <!-- 3. New Page styling to be the same as Show Page -->
+1. Fix Distros on Show Page
 3. Edit Page Add/Delete Distros Logic
 4. Index Page Styling
 5. Distro/Print Page Styling

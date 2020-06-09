@@ -111,12 +111,13 @@ $(() => {
 
   // APPEND NEXT INPUT
   const appendNextInput = () => {
+    $form.children().hide(); // detach current input field
     $arrayOfInputs.shift() // remove input field from input array
     if ($arrayOfInputs[0]) { // if there is another input in the input field
-      $form.children().hide(); // detach current input field
       $arrayOfInputs[0].appendTo($form) // append the input to the form
       $('input').next().focus() // focus the input
     } else {
+      $('<div>').css({'height': '10vh'}).appendTo($form)
       console.log('ready to hatch!');
       console.log(contactObject);
       let $submitButton = $('<input>')
