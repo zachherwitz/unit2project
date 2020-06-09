@@ -21,7 +21,7 @@
   display: flex;
 }
 
-.contact-expandable {
+.contact-expandable{
   /* border: 2px solid teal; */
   min-width: 20vw;
   font-size: 2vw;
@@ -29,15 +29,34 @@
 
 #contacts-container-button {
   text-align: center;
+  text-decoration: none;
+}
+
+#contacts-container-button:hover {
+  text-decoration: underline;
 }
 
 .contacts-buttons-container{
   display: flex;
   justify-content: space-around;
+  margin: 5vh 0;
+}
+
+#contact-toggle-button {
+  text-decoration: none;
+}
+
+#contact-toggle-button:hover {
+  text-decoration: underline;
 }
 
 #new-contact-button {
     text-decoration: none;
+    color: black;
+}
+
+#new-contact-button:hover {
+    text-decoration: underline;
     color: black;
 }
 
@@ -50,6 +69,13 @@
   font-size: 2vw;
 }
 
+#distro-toggle-button {
+  text-decoration: none;
+}
+
+#distro-toggle-button:hover {
+  text-decoration: underline;
+}
 
 .distro {
   /* border: 2px solid green; */
