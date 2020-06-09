@@ -17,14 +17,22 @@
     </div>
     <div class="site-container">
       <div class="contact-container">
-        <div class="contact-name" id="contact-name"><%=contact.name.toLowerCase()%></div>
+        <div class="top-tab-container">
+          <div class="contact-name" id="contact-name"><%=contact.name.toLowerCase()%></div>
+          <div class="tool-button-container">
+            <a href="/contacts/<%=contact.id%>/edit">EDIT</a>
+            <form action="/contacts/<%=contact.id%>?_method=DELETE" method="POST">
+              <input id="delete-button" type="submit" value="DELETE">
+            </form>
+          </div>
+        </div>
         <div class="info-container">
           <div class="photo-container"></div>
           <div class="text-container">
             department: <%=contact.department%><br>
             title: <%=contact.title%><br>
             phone: <%=contact.phone%><br>
-            email: <a href="mailto:<%=contact.email%>" target="_blank"><%=contact.email%></a><br>
+            email: <a href="mailto:<%=contact.email%>" target="_blank"><%=contact.email%></a>
             <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
             <div id="emergency" class="emergency-container">
               Emergency Contact Information: <br>
@@ -38,21 +46,18 @@
             </div>
             <% } %>
           </div>
+          <div class="distro-container">
+            <div class="distros-info">DISTROS:
+              <% for(let i = 0; i < contact.distros.length; i++){ %>
+                <a class="distro <%=contact.distros[i]%>" href="../distros/<%=contact.distros[i]%>"><%=contact.distros[i]%></a>
+              <% } %>
+            </div>
+          </div>
         </div>
-        <div class="contact-footer"></div>
-        <div class="distros-info">DISTROS:
-          <% for(let i = 0; i < contact.distros.length; i++){ %>
-            <a class="distro <%=contact.distros[i]%>" href="../distros/<%=contact.distros[i]%>"><%=contact.distros[i]%></a>
-          <% } %>
+        <div class="contact-footer">
+          <img src="/images/contact-footer-whites.png" alt="">
         </div>
       </div>
-      <br><br>
-      <a href="/contacts/<%=contact.id%>/edit">Edit Contact</a>
-      <br><br>
-      <form action="/contacts/<%=contact.id%>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE">
-      </form>
-      <br><br>
       <a href="/contacts/">Return to Index</a>
     </div>
   </body>

@@ -9,19 +9,25 @@
   flex-direction: column;
 }
 
+.top-tab-container {
+  display: flex;
+}
+
 .contact-name {
-  font-size: 6vw;
+  font-size: 5vw;
   background-color: #EAB003;
   color: white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 5px 5px 5px 15px;
-  width: 60%;
+  width: 50%;
 }
 
 .info-container {
   display: flex;
-  background-color: #F6D13A;
+  background-color: #f0dc8d;
+  padding-bottom: 100px;
+  border-top-right-radius: 20px;
 }
 
 .photo-container {
@@ -40,6 +46,20 @@
 }
 
 .contact-footer {
-  background-color: #F6D13A;
+  /* background-image: url('../images/contact-footer-whites.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center; */
+  background-color: #f0dc8d;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+.emergency-info {
+  display: none;
 }
