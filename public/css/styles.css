@@ -9,7 +9,7 @@ body {
 .site-container {
   width: 90vw;
   margin: 0 auto;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   background-color: white;
   height: 85vh;
 }
@@ -79,4 +79,19 @@ header a {
   margin-left: 80vw;
   padding: 0 700vw;
   transition: 15s;
+}
+
+.contact-footer {
+  background-color: #f0dc8d;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.contact-footer img {
+  width: 6vw;
+  margin: 0 5vw;
 }

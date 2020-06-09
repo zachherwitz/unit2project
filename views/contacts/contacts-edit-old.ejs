@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- ============ HEAD ============ -->
+    <%- include ('../partials/head.ejs') %>
+    <!-- ============/HEAD ============ -->
+    <link rel="stylesheet" href="/css/editcontact.css">
+    <script src="/js/edit-contact.js" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="header-container">
+      <!-- ============ HEADER ============ -->
+      <%- include ('../partials/header.ejs') %>
+      <!-- ============/HEADER ============ -->
+    </div>
+    <h1>Edit Contact: <%=contact.name%></h1>
+    <form action="/contacts/<%=contact.id%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=contact.name%>"><br>
+      Title: <input type="text" name="title" value="<%=contact.title%>"><br>
+      Department: <input type="text" name="department" value="<%=contact.department%>"><br>
+      Phone: <input type="tel" name="phone" value="<%=contact.phone%>"><br>
+      Email: <input type="email" name="email" value="<%=contact.email%>"><br>
+      Emergency Contact:<br>
+      Contact Name: <input type="text" name="emergencyContactName" value="<%=contact.emergencyContactName%>"><br>
+      Phone: <input type="tel" name="emergencyContactNumber" value="<%=contact.emergencyContactNumber%>"><br>
+      Relationship: <input type="text" name="emergencyContactRelationship" value="<%=contact.emergencyContactRelationship%>"><br><br>
+      <br><br><br>
+      <div class="distros-container">
+        <% for(let i = 0; i < contact.distros.length; i++){ %>
+          distro: <input class="distro-input" type="text" name="distros" value="<%=contact.distros[i]%>"><br><br>
+        <% } %>
+      </div>
+      <input type="submit" value="Update Contact">
+    </form>
+    <br><br>
+    <a href="/contacts/">Return to Index</a>
+  </body>
+</html>

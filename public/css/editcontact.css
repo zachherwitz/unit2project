@@ -27,36 +27,30 @@ input:hover {
 
 .name-container {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tool-button-container {
+  display: flex;
+  height: 50%;
 }
 
 #update-button {
-  border-radius: 20px;
   background-color: #EAB003;
-  border: 1px solid black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 2vw;
+  color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #update-button:hover {
   cursor: pointer
 }
 
-.tool-button-container {
-  display: flex;
-  flex-direction: row;
-}
-
-#delete-button {
-  background-color: #ff5c00;
-  font-family: 'Maven Pro';
-  font-size: 3vw;
-  border-radius: 20px;
-  padding: 10px;
-  border: 1px solid black;
-}
-
-#delete-button:hover {
-  cursor: pointer;
-}
 
 .contact-name {
   font-size: 5vw;
@@ -84,17 +78,7 @@ input:hover {
 }
 
 .contact-footer {
-  /* background-image: url('../images/contact-footer-whites.png');
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center; */
   background-color: #f9823f;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 

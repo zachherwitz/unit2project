@@ -15,6 +15,8 @@ $(() => {
 
   console.log('new contact page starting', contactObject);
 
+  let $siteContainer = $('.site-container').click(() => {$('input').first().focus()})
+
   // Creating Nametag
   let $nametag = $('#nametag')
 
@@ -109,9 +111,9 @@ $(() => {
 
   // APPEND NEXT INPUT
   const appendNextInput = () => {
-    $form.children().hide(); // detach current input field
     $arrayOfInputs.shift() // remove input field from input array
     if ($arrayOfInputs[0]) { // if there is another input in the input field
+      $form.children().hide(); // detach current input field
       $arrayOfInputs[0].appendTo($form) // append the input to the form
       $('input').next().focus() // focus the input
     } else {
@@ -120,10 +122,11 @@ $(() => {
       let $submitButton = $('<input>')
                           .attr({
                             'type': 'submit',
-                            'value': 'create contact'
+                            'value': 'create contact',
+                            'form': 'new-contact'
                           })
                           .addClass('submit-button')
-                          .appendTo($form)
+                          .appendTo('.confirm-container')
     }
   }
 
@@ -139,8 +142,10 @@ $(() => {
       // console.log(event.target);
       if(event.target.type === 'text') {
         if(event.target.name === 'name') {
-          $('#nametag').animate({'height': '40vh'})
+          $('#nametag').animate({'height': '50vh'})
           $('#nametag').children().toggle()
+          $('.top-tab-container').css({'display': 'flex', 'align-items': 'flex-end'})
+          $('#nametag-name').css({'display': 'flex'})
           $('.contact-footer').css({'display': 'flex'})
         }
         if(event.target.name === 'distros') {

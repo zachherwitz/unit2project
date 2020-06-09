@@ -20,9 +20,10 @@
         <div class="top-tab-container">
           <div class="contact-name" id="contact-name"><%=contact.name.toLowerCase()%></div>
           <div class="tool-button-container">
-            <a href="/contacts/<%=contact.id%>/edit">edit</a>
-            <form action="/contacts/<%=contact.id%>?_method=DELETE" method="POST">
-              <input id="delete-button" type="submit" value="X">
+            <a id="edit-link" href="/contacts/<%=contact.id%>/edit">edit</a>
+            <a id="index-link" href="/contacts/">index</a>
+            <form class="delete-form" action="/contacts/<%=contact.id%>?_method=DELETE" method="POST">
+              <input id="delete-button" type="submit" value="delete">
             </form>
           </div>
         </div>
@@ -54,9 +55,9 @@
             </div>
           </div>
         </div>
-        <div class="contact-footer">
-          <img src="/images/contact-footer-whites.png" alt="">
-        </div>
+        <!-- ========= CONTACT FOOTER ========= -->
+        <%- include ('../partials/contact-footer.ejs') %>
+        <!-- =========/CONTACT FOOTER ========= -->
       </div>
       <a href="/contacts/">Return to Index</a>
     </div>

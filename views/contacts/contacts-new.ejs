@@ -16,8 +16,12 @@
       <!-- ============/HEADER ============ -->
     </div>
     <div class="site-container">
+      <form id="new-contact" class='new-contact-form' action="/contacts" method="POST"></form>
       <div class="nametag" id="nametag">
-        <div id="nametag-name"></div>
+        <div class="top-tab-container">
+          <div id="nametag-name"></div>
+          <div class="confirm-container"></div>
+        </div>
         <div class="info-container">
           <div id="nametag-department"></div>
           <div id="nametag-title"></div>
@@ -25,11 +29,11 @@
           <div id="nametag-email"></div>
           <div id="nametag-distros"></div>
         </div>
-        <div class="contact-footer">
-          <img src="/images/contact-footer-whites.png" alt="">
-        </div>
+        <!-- ========= CONTACT FOOTER ========= -->
+        <%- include ('../partials/contact-footer.ejs') %>
+        <!-- =========/CONTACT FOOTER ========= -->
       </div>
-      <form class='new-contact-form' action="/contacts" method="POST"></form>
+      <!-- <form class='new-contact-form' action="/contacts" method="POST"></form> -->
     </div>
   </body>
 </html>

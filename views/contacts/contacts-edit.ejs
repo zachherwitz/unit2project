@@ -15,26 +15,58 @@
       <%- include ('../partials/header.ejs') %>
       <!-- ============/HEADER ============ -->
     </div>
-    <h1>Edit Contact: <%=contact.name%></h1>
-    <form action="/contacts/<%=contact.id%>?_method=PUT" method="POST">
-      Name: <input type="text" name="name" value="<%=contact.name%>"><br>
-      Title: <input type="text" name="title" value="<%=contact.title%>"><br>
-      Department: <input type="text" name="department" value="<%=contact.department%>"><br>
-      Phone: <input type="tel" name="phone" value="<%=contact.phone%>"><br>
-      Email: <input type="email" name="email" value="<%=contact.email%>"><br>
-      Emergency Contact:<br>
-      Contact Name: <input type="text" name="emergencyContactName" value="<%=contact.emergencyContactName%>"><br>
-      Phone: <input type="tel" name="emergencyContactNumber" value="<%=contact.emergencyContactNumber%>"><br>
-      Relationship: <input type="text" name="emergencyContactRelationship" value="<%=contact.emergencyContactRelationship%>"><br><br>
-      <br><br><br>
-      <div class="distros-container">
-        <% for(let i = 0; i < contact.distros.length; i++){ %>
-          distro: <input class="distro-input" type="text" name="distros" value="<%=contact.distros[i]%>"><br><br>
-        <% } %>
+    <div class="site-container">
+      <form autocomplete="off" action="/contacts/<%=contact.id%>?_method=PUT" id="update-form" method="POST">
+        <div class="name-container">
+          <input class="contact-name" id="contact-name type="text" name="name" value="<%=contact.name.toLowerCase()%>">
+          <div class="tool-button-container">
+            <input id="update-button" type="submit" value="confirm edits" form="update-form">
+          </div>
+        </div>
+        <div class="info-container">
+          <div class="text-container">
+            <div class="department-input">
+              department:
+              <input type="text" name="department" value="<%=contact.department%>">
+            </div>
+            <div class="title-input">
+              title:
+              <input type="text" name="title" value="<%=contact.title%>">
+            </div>
+            <div class="phone-input">
+              phone:
+              <input type="text" name="phone" value="<%=contact.phone%>">
+            </div>
+            <div class="email-input">
+              email:
+              <input type="text" name="email" value="<%=contact.email%>">
+            </div>
+            <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
+            <div id="emergency" class="emergency-container">
+              Emergency Contact Information: <br>
+              <div class="emergency-info">
+                E - name: <%=contact.emergencyContactName%><br>
+                E - number: <%=contact.emergencyContactNumber%><br>
+                <% if (contact.emergencyContactRelationship) { %>
+                  E - relationship: <%=contact.emergencyContactRelationship%><br>
+                <% } %>
+              </div>
+            </div>
+            <% } %>
+          </div>
+          <div class="distro-container">
+            <div class="distros-info">DISTROS:
+              <% for(let i = 0; i < contact.distros.length; i++){ %>
+                <a class="distro <%=contact.distros[i]%>" href="../../distros/<%=contact.distros[i]%>"><%=contact.distros[i]%></a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <!-- ========= CONTACT FOOTER ========= -->
+        <%- include ('../partials/contact-footer.ejs') %>
+        <!-- =========/CONTACT FOOTER ========= -->
       </div>
-      <input type="submit" value="Update Contact">
     </form>
-    <br><br>
-    <a href="/contacts/">Return to Index</a>
+    </div>
   </body>
 </html>
