@@ -8,7 +8,8 @@ $(() => {
     // console.log(emailAddresses, emailSubject);
     window.open(`mailto:${emailAddresses}?subject=${emailSubject}`)
   }
-
+  $('#emails').hide();
+  
   const $populateEmailButton = $('<button>')
                                 .text('Populate Emails')
                                 .click(() => {

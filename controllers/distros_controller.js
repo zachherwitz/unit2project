@@ -29,13 +29,6 @@ distros.get('/:id', (req, res) => {
   })
 })
 
-// INDEX //
-distros.get('/', (req, res) => {
-  res.render(
-    'distros/distro-index.ejs'
-  )
-})
-
 //R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P~//~R.I.P
 //                                                                           //
 //                                GRAVEYARD                                  //

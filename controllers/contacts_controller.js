@@ -83,7 +83,8 @@ contacts.post('/', (req, res) => {
 
 // INDEX //
 contacts.get('/', (req, res) => {
-  Contact.find({}, (error, allContacts) => {
+  Contact.find({}, {'name': 1, 'id': 1, 'distros': 1}, (error, allContacts) => {
+    console.log(allContacts[0]);
     let distroList = [];
     for (let i = 0; i < allContacts.length; i++) {
       // console.log(allContacts[i].distros);
@@ -93,6 +94,15 @@ contacts.get('/', (req, res) => {
         }
       }
     }
+    allContacts.sort((first, second) => {
+      let firstName = first.name.toLowerCase()
+      let secondName = second.name.toLowerCase()
+      if (firstName < secondName) {
+        return -1
+      } else {
+        return 1
+      }
+    })
     const filteredList = distroList.filter((v, i, a) => a.indexOf(v) === i);
     res.render(
       'contacts/contacts-index.ejs',
@@ -120,27 +130,81 @@ contacts.get('/', (req, res) => {
 //   Contact.create(
 //     [
 //       {
-//         name: 'Zach H',
+//         name: 'Zach Herwitz',
+//         title: 'Project Manager',
 //         department: 'Production',
-//         title: 'Production Secretary',
-//         departmentHead: false,
-//         phone: 'XXX-XXX-XXXX',
-//         email: 'XXXX@xxx.com',
-//         emergencyContactName: 'Olivia M',
-//         emergencyContactNumber: 'XXX-XXX-XXXX',
+//         phone: '301-367-9821',
+//         email: 'zach.herwitz@gmail.com',
+//         emergencyContactName: 'Olivia',
+//         emergencyContactNumber: '302-867-5309',
 //         emergencyContactRelationship: 'Partner',
-//         btl: true,
-//         core: true
+//         distros: ['callsheet', 'production', 'prep schedule', 'pizza party']
 //       },
 //       {
-//         name: 'Max P',
+//         name: 'Sama Slater',
+//         title: 'Lead Designer',
+//         department: 'Art',
+//         phone: '444-367-9821',
+//         email: 'sama.slater@gmail.com',
+//         emergencyContactName: 'Billy',
+//         emergencyContactNumber: '342-867-5309',
+//         emergencyContactRelationship: 'Partner',
+//         distros: ['art', 'prep schedule', 'tech scout']
+//       },
+//       {
+//         name: 'Danyaal Sutherland',
+//         title: 'Designer',
+//         department: 'Art',
+//         phone: '432-367-9821',
+//         email: 'danyaal.sutherland@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['art meetings', 'prep schedule', 'pizza party']
+//       },
+//       {
+//         name: 'Brian Power',
+//         title: 'Production Coordinator',
 //         department: 'Production',
+//         phone: '301-367-9821',
+//         email: 'brian-power@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['production', 'prep schedule', 'internship']
+//       },
+//       {
+//         name: 'Viola Wallis',
 //         title: 'Production Assistant',
-//         departmentHead: false,
-//         phone: 'XXX-XXX-XXXX',
-//         email: 'XXXX@xxx.com',
-//         btl: true,
-//         core: true
+//         department: 'Production',
+//         phone: '444-367-9821',
+//         email: 'viola-wallis@gmail.com',
+//         emergencyContactName: 'Benji',
+//         emergencyContactNumber: '342-867-5309',
+//         emergencyContactRelationship: 'Father',
+//         distros: ['production', 'prep schedule', 'tech scout']
+//       },
+//       {
+//         name: 'Ava-Mae Pike',
+//         title: 'Designer',
+//         department: 'Art',
+//         phone: '432-367-9821',
+//         email: 'ava-mae@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['art', 'pizza party']
+//       },
+//       {
+//         name: 'Marguerite Brett',
+//         title: 'Design Intern',
+//         department: 'Art',
+//         phone: '432-367-9821',
+//         email: 'marguerite@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['art', 'internship']
 //       }
 //     ],
 //     (error, data) => {
@@ -148,6 +212,7 @@ contacts.get('/', (req, res) => {
 //     }
 //   )
 // })
+
 
 
 //zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach~//~zach
