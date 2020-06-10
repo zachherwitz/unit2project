@@ -2,12 +2,18 @@
   font-family: sans-serif;
 }
 
+body {
+  background-image: url('/images/wood-panel.jpg');
+  background-repeat: repeat;
+}
+
 .site-container {
   width: 90vw;
   margin: 0 auto;
   /* border: 2px solid red; */
-  background-color: white;
-  height: 85vh;
+  background-color: #2BBBBC;
+  min-height: 85vh;
+  /* height: 85vh; */
 }
 
 /* NAV STYLES */
@@ -39,6 +45,7 @@ header a {
 }
 
 .logo {
+  color: white;
   font-size: 3vw;
   letter-spacing: 5px;
   font-family: 'Maven Pro';

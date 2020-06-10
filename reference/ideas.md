@@ -119,6 +119,7 @@ TODO::
 <!-- 1. Fix Distros on Show Page -->
 <!-- 2. Index Page Styling -->
 <!-- 4. Add 'Click Me' to Splash Page -->
-1. Distro/Print Page Styling
+<!-- 1. Distro/Print Page Styling -->
+1. Background Design
 2. Edit Page Add/Delete Distros Logic
 3. Write Up README
