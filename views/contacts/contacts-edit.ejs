@@ -16,60 +16,62 @@
       <!-- ============/HEADER ============ -->
     </div>
     <div class="site-container">
-      <form autocomplete="off" action="/contacts/<%=contact.id%>?_method=PUT" id="update-form" method="POST">
-        <div class="name-container">
-          <input class="contact-name" id="contact-name type="text" name="name" value="<%=contact.name.toLowerCase()%>">
-          <div class="tool-button-container">
-            <input id="update-button" type="submit" value="confirm edits" form="update-form">
+      <div class="contact-container">
+        <form autocomplete="off" action="/contacts/<%=contact.id%>?_method=PUT" id="update-form" method="POST">
+          <div class="name-container">
+            <input class="contact-name" id="contact-name type="text" name="name" value="<%=contact.name.toLowerCase()%>">
+            <div class="tool-button-container">
+              <input id="update-button" type="submit" value="confirm edits" form="update-form">
+            </div>
           </div>
-        </div>
-        <div class="info-container">
-          <div class="text-container">
-            <div class="department-input">
-              department:
-              <input type="text" name="department" value="<%=contact.department%>">
+          <div class="info-container">
+            <div class="text-container">
+              <div class="department-input">
+                department:
+                <input type="text" name="department" value="<%=contact.department%>">
+              </div>
+              <div class="title-input">
+                title:
+                <input type="text" name="title" value="<%=contact.title%>">
+              </div>
+              <div class="phone-input">
+                phone:
+                <input type="text" name="phone" value="<%=contact.phone%>">
+              </div>
+              <div class="email-input">
+                email:
+                <input type="text" name="email" value="<%=contact.email%>">
+              </div>
+              <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
+              <div id="emergency" class="emergency-container">
+                Emergency Contact Information: <br>
+                <div class="emergency-info">
+                  E - name: <%=contact.emergencyContactName%><br>
+                  E - number: <%=contact.emergencyContactNumber%><br>
+                  <% if (contact.emergencyContactRelationship) { %>
+                    E - relationship: <%=contact.emergencyContactRelationship%><br>
+                  <% } %>
+                </div>
+              </div>
+              <% } %>
             </div>
-            <div class="title-input">
-              title:
-              <input type="text" name="title" value="<%=contact.title%>">
-            </div>
-            <div class="phone-input">
-              phone:
-              <input type="text" name="phone" value="<%=contact.phone%>">
-            </div>
-            <div class="email-input">
-              email:
-              <input type="text" name="email" value="<%=contact.email%>">
-            </div>
-            <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
-            <div id="emergency" class="emergency-container">
-              Emergency Contact Information: <br>
-              <div class="emergency-info">
-                E - name: <%=contact.emergencyContactName%><br>
-                E - number: <%=contact.emergencyContactNumber%><br>
-                <% if (contact.emergencyContactRelationship) { %>
-                  E - relationship: <%=contact.emergencyContactRelationship%><br>
+            <div class="distro-container">
+              distros:
+              <div class="distro-button-container">
+                <% for(let i = 0; i < contact.distros.length; i++){ %>
+                  <div class="distro-button" id="icon-<%=contact.distros[i]%>">
+                    <input class="icon-input" type="text" name="distros" value="<%=contact.distros[i]%>">
+                  </div>
                 <% } %>
               </div>
             </div>
-            <% } %>
           </div>
-          <div class="distro-container">
-            distros:
-            <div class="distro-button-container">
-              <% for(let i = 0; i < contact.distros.length; i++){ %>
-                <div class="distro-button" id="icon-<%=contact.distros[i]%>">
-                  <input class="icon-input" type="text" name="distros" value="<%=contact.distros[i]%>">
-                </div>
-              <% } %>
-            </div>
-          </div>
+          <!-- ========= CONTACT FOOTER ========= -->
+          <%- include ('../partials/contact-footer.ejs') %>
+          <!-- =========/CONTACT FOOTER ========= -->
         </div>
-        <!-- ========= CONTACT FOOTER ========= -->
-        <%- include ('../partials/contact-footer.ejs') %>
-        <!-- =========/CONTACT FOOTER ========= -->
+        </form>
       </div>
-    </form>
     </div>
   </body>
 </html>
