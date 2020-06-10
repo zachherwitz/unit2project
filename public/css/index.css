@@ -74,6 +74,7 @@
   margin: 2px;
   padding: 5px 20px;
   border: 1px solid white;
+  border-radius: 5px;
 }
 
 .contact-link {
@@ -95,6 +96,7 @@
     margin: 2px;
     text-decoration: none;
     text-shadow: 1px 2px black;
+    border-radius: 5px;
 }
 
 .distro:hover {
