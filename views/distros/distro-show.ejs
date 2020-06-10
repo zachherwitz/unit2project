@@ -6,6 +6,7 @@
     <%- include ('../partials/head.ejs') %>
     <!-- ============/HEAD ============ -->
     <script src="/js/distro-show.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/css/distroshow.css">
     <title></title>
   </head>
   <body>
@@ -14,17 +15,22 @@
       <%- include ('../partials/header.ejs') %>
       <!-- ============/HEADER ============ -->
     </div>
-    <h1><%=distroName%> DISTRO LIST</h1>
-    <div class="">
-      <% let emailAddresses = [] %>
-      <% for(let i = 0; i < distro.length; i++){ %>
-        <a href="../contacts/<%=distro[i].id%>"><%=distro[i].name%></a>
-        <% emailAddresses.push(distro[i].email) %>
-      <% } %>
-      <% let emails = emailAddresses.join() %>
-      <div id="distroName" style="display: none"><%=distroName%></div>
-      <div id="emails"><%=emails%></div>
-      <br><br>
+    <div class="site-container">
+      <div class="populating-text" target="_blank">click to populate</div>
+      <div class="subject-text">subject: <%=distroName%></div>
+      <div class="emails-list">
+        <% let emailAddresses = [] %>
+        <% for(let i = 0; i < distro.length; i++){ %>
+          <a href="../contacts/<%=distro[i].id%>"><%=distro[i].name%> |<span> <%=distro[i].department%> | <%=distro[i].title%> | <%=distro[i].email%></span></a><br>
+          <% emailAddresses.push(distro[i].email) %>
+        <% } %>
+        <% let emails = emailAddresses.join() %>
+        <div id="distroName" style="display: none"><%=distroName%></div>
+        <div id="emails"><%=emails%></div>
+        <!-- ========= CONTACT FOOTER ========= -->
+        <%- include ('../partials/contact-footer.ejs') %>
+        <!-- =========/CONTACT FOOTER ========= -->
+      </div>
     </div>
   </body>
 </html>

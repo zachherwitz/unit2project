@@ -1,7 +1,6 @@
 $(() => {
 
 
-
   const populateEmails = () => {
     let emailAddresses = $('#emails').text();
     let emailSubject = $('#distroName').text();
@@ -9,14 +8,17 @@ $(() => {
     window.open(`mailto:${emailAddresses}?subject=${emailSubject}`)
   }
   $('#emails').hide();
-  
-  const $populateEmailButton = $('<button>')
-                                .text('Populate Emails')
-                                .click(() => {
-                                  populateEmails()
-                                })
-                                .appendTo('body')
-                                .attr(
-                                  "target", "_blank"
-                                )
+
+  $('.populating-text').click(populateEmails)
+
 })
+
+  // const $populateEmailButton = $('<button>').text('Populate Emails')
+  //                                           .click(() => {
+  //                                             populateEmails()
+  //                                           })
+  //                                           .appendTo('.site-container')
+  //                                           .attr(
+  //                                             "target", "_blank"
+  //                                           )
+  // })

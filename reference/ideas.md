@@ -117,8 +117,8 @@ TODO::
 <!-- 2. Edit Page Styling to be the same as Show Page -->
 <!-- 3. New Page styling to be the same as Show Page -->
 <!-- 1. Fix Distros on Show Page -->
-1. Edit Page Add/Delete Distros Logic
-2. Index Page Styling
-3. Distro/Print Page Styling
-4. Add 'Click Me' to Splash Page
-5. Write Up README
+<!-- 2. Index Page Styling -->
+<!-- 4. Add 'Click Me' to Splash Page -->
+1. Distro/Print Page Styling
+2. Edit Page Add/Delete Distros Logic
+3. Write Up README
