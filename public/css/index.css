@@ -34,7 +34,7 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 5px 5px 5px 15px;
-  width: 40%;
+  width: 30%;
   text-decoration: none;
 }
 
@@ -46,9 +46,28 @@
   background-color: #EAB003;
 }
 
+.contacts-new-tab {
+  font-size: 3vw;
+  background-color: #EAB003;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 0;
+  border: 1px solid white;
+  border-right: none;
+  border-bottom: none;
+  padding: 0;
+}
+
+.contacts-new-tab > a {
+  text-decoration: none;
+  color: white;
+}
+
 .distros-tab {
   background-color: #b05c9d;
-  font-size: 3vw;
+  font-size: 4vw;
 }
 
 .info-container {
@@ -101,14 +120,6 @@
 
 .distro:hover {
   text-decoration: underline;
-}
-
-#full-contacts {
-
-}
-
-#full-distros {
-
 }
 
 .underline {
