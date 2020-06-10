@@ -6,6 +6,9 @@
 .contact-container {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px;
 }
 
 .top-tab-container {
@@ -14,9 +17,10 @@
 }
 
 .contact-name {
-  font-size: 5vw;
+  font-size: 4vw;
   background-color: #EAB003;
   color: white;
+  text-shadow: 1px 2px black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 5px 5px 5px 15px;
@@ -31,7 +35,7 @@
 #edit-link {
   background-color: #f9823f;
   font-family: 'Maven Pro';
-  font-size: 2vw;
+  font-size: 1.5vw;
   color: black;
   text-decoration: none;
   border-top-left-radius: 20px;
@@ -47,12 +51,13 @@
 
 .delete-form {
   color: white;
+  text-shadow: 1px 2px black;
 }
 
 #delete-button {
   background-color: #ff5c00;
   font-family: 'Maven Pro';
-  font-size: 2vw;
+  font-size: 1.5vw;
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -68,7 +73,7 @@
 #index-link {
   background-color: #f9823f;
   font-family: 'Maven Pro';
-  font-size: 2vw;
+  font-size: 1.5vw;
   color: black;
   text-decoration: none;
   padding: 10px;
@@ -93,7 +98,7 @@
 }
 
 .text-container {
-  font-size: 3vw;
+  font-size: 2vw;
   width: 60%;
   line-height: 1.6;
 }
@@ -121,14 +126,10 @@
 
 .distro-button-container {
   display: flex;
-  flex-wrap: wrap;
-  /* border: 2px solid orange; */
+  flex-direction: column;
 }
 
 .distro {
-  /* border: 2px solid green; */
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   font-size: 2vw;
@@ -138,15 +139,11 @@
 }
 
 .distro-button {
-  width: 15vw;
-  height: 15vw;
+  width: 70%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('../images/legal-icon.png');
-  background-size: contain;
-  background-repeat: none;
-  /* border: 2px solid teal; */
+  background-color: #d7adce;
+  border: 2px solid white;
+  text-shadow: 1px 2px black;
 }
 
 .distro-name {

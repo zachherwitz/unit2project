@@ -16,17 +16,21 @@
       <!-- ============/HEADER ============ -->
     </div>
     <div class="site-container">
-      <div class="populating-text" target="_blank">click to populate</div>
-      <div class="subject-text">subject: <%=distroName%></div>
-      <div class="emails-list">
-        <% let emailAddresses = [] %>
-        <% for(let i = 0; i < distro.length; i++){ %>
-          <a href="../contacts/<%=distro[i].id%>"><%=distro[i].name%> |<span> <%=distro[i].department%> | <%=distro[i].title%> | <%=distro[i].email%></span></a><br>
-          <% emailAddresses.push(distro[i].email) %>
-        <% } %>
-        <% let emails = emailAddresses.join() %>
-        <div id="distroName" style="display: none"><%=distroName%></div>
-        <div id="emails"><%=emails%></div>
+      <div class="contact-container">
+        <div class="top-tab-container">
+          <div class="subject-text">subject: <%=distroName%></div>
+          <div class="populating-text" target="_blank">click to populate</div>
+        </div>
+        <div class="emails-list">
+          <% let emailAddresses = [] %>
+          <% for(let i = 0; i < distro.length; i++){ %>
+            <a href="../contacts/<%=distro[i].id%>"><%=distro[i].name%> |<span> <%=distro[i].department%> | <%=distro[i].title%> | <%=distro[i].email%></span></a><br>
+            <% emailAddresses.push(distro[i].email) %>
+          <% } %>
+          <% let emails = emailAddresses.join() %>
+          <div id="distroName" style="display: none"><%=distroName%></div>
+          <div id="emails"><%=emails%></div>
+        </div>
         <!-- ========= CONTACT FOOTER ========= -->
         <%- include ('../partials/contact-footer.ejs') %>
         <!-- =========/CONTACT FOOTER ========= -->

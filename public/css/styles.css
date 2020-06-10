@@ -8,11 +8,13 @@ body {
 }
 
 .site-container {
-  width: 90vw;
-  margin: 0 auto;
+  width: 80vw;
+  border-radius: 10px;
+  margin: 20px auto;
   /* border: 2px solid red; */
-  background-color: #2BBBBC;
-  min-height: 85vh;
+  /* background-color: #7fffd4; */
+  background-image: url('/images/site-container.jpg');
+  min-height: 100vh;
   /* height: 85vh; */
 }
 
@@ -46,6 +48,7 @@ header a {
 
 .logo {
   color: white;
+  text-shadow: 1px 2px black;
   font-size: 3vw;
   letter-spacing: 5px;
   font-family: 'Maven Pro';
@@ -95,18 +98,14 @@ header a {
 }
 
 .contact-footer img {
-  width: 6vw;
+  width: 3vw;
   margin: 0 5vw;
 }
 
 #icon-production {
-  background-image: url('../images/accounting-icon.png');
-  background-size: contain;
-  background-repeat: none;
+  background-color: #b05c9d;
 }
 
 #icon-art {
-  background-image: url('../images/art-icon.png');
-  background-size: contain;
-  background-repeat: none;
+  background-color: teal;
 }

@@ -16,56 +16,56 @@
       <!-- ============/HEADER ============ -->
     </div>
     <div class="site-container">
-      <div class="contact-container">
-        <div class="top-tab-container">
-          <div class="contact-name" id="contact-name"><%=contact.name.toLowerCase()%></div>
-          <div class="tool-button-container">
-            <a id="edit-link" href="/contacts/<%=contact.id%>/edit">edit</a>
-            <a id="index-link" href="/contacts/">index</a>
-            <form class="delete-form" action="/contacts/<%=contact.id%>?_method=DELETE" method="POST">
-              <input id="delete-button" type="submit" value="delete">
-            </form>
+        <div class="contact-container">
+          <div class="top-tab-container">
+            <div class="contact-name" id="contact-name"><%=contact.name.toLowerCase()%></div>
+            <div class="tool-button-container">
+              <a id="edit-link" href="/contacts/<%=contact.id%>/edit">edit</a>
+              <a id="index-link" href="/contacts/">index</a>
+              <form class="delete-form" action="/contacts/<%=contact.id%>?_method=DELETE" method="POST">
+                <input id="delete-button" type="submit" value="delete">
+              </form>
+            </div>
           </div>
-        </div>
-        <div class="info-container">
-          <div class="photo-container"></div>
-          <div class="text-container">
-            department: <%=contact.department%><br>
-            title: <%=contact.title%><br>
-            phone: <%=contact.phone%><br>
-            email: <a href="mailto:<%=contact.email%>" target="_blank"><%=contact.email%></a>
-            <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
-            <div id="emergency" class="emergency-container">
-              Emergency Contact Information: <br>
-              <div class="emergency-info">
-                E - name: <%=contact.emergencyContactName%><br>
-                E - number: <%=contact.emergencyContactNumber%><br>
-                <% if (contact.emergencyContactRelationship) { %>
-                  E - relationship: <%=contact.emergencyContactRelationship%><br>
+          <div class="info-container">
+            <div class="photo-container"></div>
+            <div class="text-container">
+              department: <%=contact.department%><br>
+              title: <%=contact.title%><br>
+              phone: <%=contact.phone%><br>
+              email: <a href="mailto:<%=contact.email%>" target="_blank"><%=contact.email%></a>
+              <% if (contact.emergencyContactName && contact.emergencyContactNumber) { %>
+              <div id="emergency" class="emergency-container">
+                Emergency Contact Information: <br>
+                <div class="emergency-info">
+                  E - name: <%=contact.emergencyContactName%><br>
+                  E - number: <%=contact.emergencyContactNumber%><br>
+                  <% if (contact.emergencyContactRelationship) { %>
+                    E - relationship: <%=contact.emergencyContactRelationship%><br>
+                  <% } %>
+                </div>
+              </div>
+              <% } %>
+            </div>
+            <div class="distro-container">
+              distros:
+              <div class="distro-button-container">
+                <% for(let i = 0; i < contact.distros.length; i++){ %>
+                  <a class="distro" href="../distros/<%=contact.distros[i]%>">
+                    <div class="distro-button" id="icon-<%=contact.distros[i]%>">
+                      <div class="distro-name">
+                        <%=contact.distros[i]%>
+                      </div>
+                    </div>
+                  </a>
                 <% } %>
               </div>
             </div>
-            <% } %>
           </div>
-          <div class="distro-container">
-            distros:
-            <div class="distro-button-container">
-              <% for(let i = 0; i < contact.distros.length; i++){ %>
-                <a class="distro" href="../distros/<%=contact.distros[i]%>">
-                  <div class="distro-button" id="icon-<%=contact.distros[i]%>">
-                    <div class="distro-name">
-                      <%=contact.distros[i]%>
-                    </div>
-                  </div>
-                </a>
-              <% } %>
-            </div>
-          </div>
+          <!-- ========= CONTACT FOOTER ========= -->
+          <%- include ('../partials/contact-footer.ejs') %>
+          <!-- =========/CONTACT FOOTER ========= -->
         </div>
-        <!-- ========= CONTACT FOOTER ========= -->
-        <%- include ('../partials/contact-footer.ejs') %>
-        <!-- =========/CONTACT FOOTER ========= -->
-      </div>
     </div>
   </body>
 </html>
