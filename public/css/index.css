@@ -1,106 +1,114 @@
 * {
-  font-family: 'Maven Pro';
+  font-family: 'Maven Pro'
 }
 
-.site-container {
-  display: flex;
-  flex-direction: column;
+.spacer {
+  height: 40px;
 }
 
-.distro-container {
-  font-size: 3vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* border: 2px solid yellow; */
-}
-
-.expandables-container {
-  margin-top: 5vh;
-  /* border: 2px solid black; */
-  display: flex;
-}
-
-.contact-expandable{
-  /* border: 2px solid teal; */
-  min-width: 20vw;
-  font-size: 2vw;
-}
-
-#contacts-container-button {
+.info-text {
+  background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
-  text-decoration: none;
-}
-
-#contacts-container-button:hover {
-  text-decoration: underline;
-}
-
-.contacts-buttons-container{
-  display: flex;
-  justify-content: space-around;
-  margin: 5vh 0;
-}
-
-#contact-toggle-button {
-  text-decoration: none;
-}
-
-#contact-toggle-button:hover {
-  text-decoration: underline;
-}
-
-#new-contact-button {
-    text-decoration: none;
-    color: black;
-}
-
-#new-contact-button:hover {
-    text-decoration: underline;
-    color: black;
+  font-size: 1.5vw;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .contact-container {
-  /* border: 2px solid orange; */
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
-.distro-expandable {
-  /* border: 2px solid purple; */
-  font-size: 2vw;
+.top-tab-container {
+  display: flex;
+  align-items: flex-end;
 }
 
-#distro-toggle-button {
+.tab {
+  font-size: 4vw;
+  color: white;
+  text-shadow: 1px 2px black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 5px 5px 5px 15px;
+  width: 40%;
   text-decoration: none;
 }
 
-#distro-toggle-button:hover {
+.tab:hover {
+  text-decoration: underline;
+}
+
+.contacts-tab {
+  background-color: #EAB003;
+}
+
+.distros-tab {
+  background-color: #b05c9d;
+  font-size: 3vw;
+}
+
+.info-container {
+  display: flex;
+  background-color: #f0dc8d;
+  padding-bottom: 100px;
+  border-top-right-radius: 20px;
+  padding: 5px 5px 5px 15px;
+  max-height: 40vh;
+  overflow: scroll;
+}
+
+.info {
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.contact-link-container {
+  background-color: #EAB003;
+  margin: 2px;
+  padding: 5px 20px;
+  border: 1px solid white;
+}
+
+.contact-link {
+  color: white;
+  text-shadow: 1px 2px black;
+  text-decoration: none;
+}
+
+.contact-link:hover {
   text-decoration: underline;
 }
 
 .distro {
-  /* border: 2px solid green; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 2vw;
-  text-decoration: none;
-  color: white;
-  text-shadow: 1px 2px black;
+    text-align: left;
+    background-color: #b05c9d;
+    padding: 5px 20px;
+    color: white;
+    border: 1px solid white;
+    margin: 2px;
+    text-decoration: none;
+    text-shadow: 1px 2px black;
 }
 
-.distro-button {
-  width: 15vw;
-  height: 15vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('../images/legal-icon.png');
-  background-size: contain;
-  background-repeat: none;
-  /* border: 2px solid teal; */
+.distro:hover {
+  text-decoration: underline;
 }
 
-.distro-name {
-    text-align: center;
+#full-contacts {
+
+}
+
+#full-distros {
+
+}
+
+.underline {
+  text-decoration: underline;
 }

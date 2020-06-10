@@ -16,36 +16,36 @@
       <!-- ============/HEADER ============ -->
     </div>
     <div class="site-container">
+      <div class="spacer"></div>
       <div class="info-text">
         welcome to d|S T R O. manage your contacts. manage your distro groups. (manage your expectations)
       </div>
-      <div class="expandables-container">
-        <div class="contact-expandable">
-          <div id="contacts-container-button">contacts</div>
-          <div class="contacts-buttons-container">
-            <div id="contact-toggle-button">display</div>
-            <a id="new-contact-button" href="/contacts/new">create</a>
-          </div>
-          <div class="contact-container">
+      <div class="contact-container">
+        <div class="top-tab-container">
+          <div class="tab contacts-tab">contacts</div>
+          <div class="tab distros-tab">distros</div>
+        </div>
+        <div class="info-container">
+          <div class="info" id="full-contacts">
             <% for(let i = 0; i < contacts.length; i++){ %>
-              <div>
+              <div class='contact-link-container'>
                 <a class="contact-link" href="/contacts/<%=contacts[i].id%>"><%=contacts[i].name%></a>
               </div>
             <% } %>
           </div>
-        </div>
-        <div class="distro-expandable">
-          <div id="distro-toggle-button">distros</div>
-          <div class="distro-container">
+          <div class="info" id="full-distros">
             <% for(let i = 0; i < distros.length; i++){ %>
               <a class="distro" href="../distros/<%=distros[i]%>">
-                <div class="distro-button" id="icon-<%=distros[i]%>">
+                <div class="distro-button">
                   <div class="distro-name"><%=distros[i]%></div>
                 </div>
               </a>
             <% } %>
           </div>
         </div>
+        <!-- ========= CONTACT FOOTER ========= -->
+        <%- include ('../partials/contact-footer.ejs') %>
+        <!-- =========/CONTACT FOOTER ========= -->
       </div>
     </div>
   </body>

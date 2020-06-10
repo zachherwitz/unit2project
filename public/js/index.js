@@ -1,18 +1,21 @@
 $(() => {
-  $('.distro-container').toggle()
-  $('.contact-container').toggle()
-  $('.contacts-buttons-container').toggle()
 
-  $('#distro-toggle-button').click(() => {
-    $('.distro-container').toggle('slow')
+  $('#full-distros').hide()
+  $('#full-contacts').hide()
+
+  $('.contacts-tab').click(() => {
+    $('#full-distros').hide()
+    $('#full-contacts').show()
+    $('.contacts-tab').addClass('underline')
+    $('.distros-tab').removeClass('underline')
   })
 
-  $('#contact-toggle-button').click(() => {
-    $('.contact-container').toggle('slow')
+  $('.distros-tab').click(() => {
+    $('#full-contacts').hide()
+    $('#full-distros').show()
+    $('.contacts-tab').removeClass('underline')
+    $('.distros-tab').addClass('underline')
   })
 
-  $('#contacts-container-button').click(() => {
-    $('.contacts-buttons-container').toggle('slow')
-  })
 
 })
