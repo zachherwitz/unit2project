@@ -128,188 +128,188 @@ contacts.get('/', (req, res) => {
 // })
 
 // Seed Route //
-contacts.get('/seed/confirm', (req, res) => {
-  Contact.create(
-    [
-      // {
-      //   name: 'Zach Herwitz',
-      //   title: 'Project Manager',
-      //   department: 'Production',
-      //   phone: '301-367-9821',
-      //   email: 'zach.herwitz@gmail.com',
-      //   emergencyContactName: 'Olivia',
-      //   emergencyContactNumber: '302-867-5309',
-      //   emergencyContactRelationship: 'Partner',
-      //   distros: ['callsheet', 'production', 'prep schedule', 'pizza party']
-      // },
-      {
-        name: 'Sama Slater',
-        title: 'Lead Designer',
-        department: 'Art',
-        phone: '444-367-9821',
-        email: 'sama.slater@gmail.com',
-        emergencyContactName: 'Billy',
-        emergencyContactNumber: '342-867-5309',
-        emergencyContactRelationship: 'Partner',
-        distros: ['art', 'prep schedule', 'tech scout']
-      },
-      {
-        name: 'Danyaal Sutherland',
-        title: 'Designer',
-        department: 'Art',
-        phone: '432-367-9821',
-        email: 'danyaal.sutherland@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['art', 'prep schedule', 'pizza party']
-      },
-      {
-        name: 'Brian Power',
-        title: 'Production Coordinator',
-        department: 'Production',
-        phone: '301-367-9821',
-        email: 'brian-power@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['production', 'prep schedule', 'internship']
-      },
-      {
-        name: 'Viola Wallis',
-        title: 'Production Assistant',
-        department: 'Production',
-        phone: '444-367-9821',
-        email: 'viola-wallis@gmail.com',
-        emergencyContactName: 'Benji',
-        emergencyContactNumber: '342-867-5309',
-        emergencyContactRelationship: 'Father',
-        distros: ['production', 'prep schedule', 'tech scout']
-      },
-      {
-        name: 'Ava-Mae Pike',
-        title: 'Designer',
-        department: 'Art',
-        phone: '432-367-9821',
-        email: 'ava-mae@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['art', 'pizza party']
-      },
-      {
-        name: 'Marguerite Brett',
-        title: 'Design Intern',
-        department: 'Art',
-        phone: '432-367-9821',
-        email: 'marguerite@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['art', 'internship']
-      },
-      {
-        name: 'Sarah Purchase',
-        title: 'Communications Intern',
-        department: 'Communications',
-        phone: '432-367-9821',
-        email: 'sarahpurchase@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['comms', 'internship']
-      },{
-        name: 'Rita Hayworth',
-        title: 'Communications Intern',
-        department: 'Communications',
-        phone: '432-367-9821',
-        email: 'ritahayworth@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['comms', 'internship']
-      },{
-        name: 'Paul Belt',
-        title: 'Design Intern',
-        department: 'Art',
-        phone: '432-367-9821',
-        email: 'paulbelt@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['art', 'internship']
-      },{
-        name: 'Sandy Myers',
-        title: 'Production Intern',
-        department: 'Production',
-        phone: '432-367-9821',
-        email: 'marguerite@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['art', 'internship', 'pizza party']
-      },
-      {
-        name: 'Aurora Smithson',
-        title: 'VP of HR',
-        department: 'Human Resources',
-        phone: '432-367-9821',
-        email: 'aurorasmithson@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['hr', 'callsheet']
-      },
-      // {
-      //   name: 'Biggie Smalls',
-      //   title: 'Legend',
-      //   department: 'Music',
-      //   phone: '432-367-9821',
-      //   email: 'biggie@gmail.com',
-      //   emergencyContactName: '',
-      //   emergencyContactNumber: '',
-      //   emergencyContactRelationship: '',
-      //   distros: ['music', 'pizza party']
-      // },
-      // {
-      //   name: 'Tupac Shakur',
-      //   title: 'Legend',
-      //   department: 'Music',
-      //   phone: '432-367-9821',
-      //   email: 'tupac@gmail.com',
-      //   emergencyContactName: '',
-      //   emergencyContactNumber: '',
-      //   emergencyContactRelationship: '',
-      //   distros: ['music', 'callsheet']
-      // },
-      {
-        name: 'Kentucky Poole',
-        title: 'Mascot',
-        department: 'Morale',
-        phone: '432-367-9821',
-        email: 'marguerite@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['morale boost', 'selfcare']
-      },
-      {
-        name: 'Jessica Rabrit',
-        title: 'Mascot',
-        department: 'Morale',
-        phone: '432-367-9821',
-        email: 'marguerite@gmail.com',
-        emergencyContactName: '',
-        emergencyContactNumber: '',
-        emergencyContactRelationship: '',
-        distros: ['morale boost', 'selfcare']
-      },
-    ],
-    (error, data) => {
-      res.redirect('/contacts')
-    }
-  )
-})
+// contacts.get('/seed/confirm', (req, res) => {
+//   Contact.create(
+//     [
+//       // {
+//       //   name: 'Zach Herwitz',
+//       //   title: 'Project Manager',
+//       //   department: 'Production',
+//       //   phone: '301-367-9821',
+//       //   email: 'zach.herwitz@gmail.com',
+//       //   emergencyContactName: 'Olivia',
+//       //   emergencyContactNumber: '302-867-5309',
+//       //   emergencyContactRelationship: 'Partner',
+//       //   distros: ['callsheet', 'production', 'prep schedule', 'pizza party']
+//       // },
+//       {
+//         name: 'Sama Slater',
+//         title: 'Lead Designer',
+//         department: 'Art',
+//         phone: '444-367-9821',
+//         email: 'sama.slater@gmail.com',
+//         emergencyContactName: 'Billy',
+//         emergencyContactNumber: '342-867-5309',
+//         emergencyContactRelationship: 'Partner',
+//         distros: ['art', 'prep schedule', 'tech scout']
+//       },
+//       {
+//         name: 'Danyaal Sutherland',
+//         title: 'Designer',
+//         department: 'Art',
+//         phone: '432-367-9821',
+//         email: 'danyaal.sutherland@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['art', 'prep schedule', 'pizza party']
+//       },
+//       {
+//         name: 'Brian Power',
+//         title: 'Production Coordinator',
+//         department: 'Production',
+//         phone: '301-367-9821',
+//         email: 'brian-power@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['production', 'prep schedule', 'internship']
+//       },
+//       {
+//         name: 'Viola Wallis',
+//         title: 'Production Assistant',
+//         department: 'Production',
+//         phone: '444-367-9821',
+//         email: 'viola-wallis@gmail.com',
+//         emergencyContactName: 'Benji',
+//         emergencyContactNumber: '342-867-5309',
+//         emergencyContactRelationship: 'Father',
+//         distros: ['production', 'prep schedule', 'tech scout']
+//       },
+//       {
+//         name: 'Ava-Mae Pike',
+//         title: 'Designer',
+//         department: 'Art',
+//         phone: '432-367-9821',
+//         email: 'ava-mae@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['art', 'pizza party']
+//       },
+//       {
+//         name: 'Marguerite Brett',
+//         title: 'Design Intern',
+//         department: 'Art',
+//         phone: '432-367-9821',
+//         email: 'marguerite@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['art', 'internship']
+//       },
+//       {
+//         name: 'Sarah Purchase',
+//         title: 'Communications Intern',
+//         department: 'Communications',
+//         phone: '432-367-9821',
+//         email: 'sarahpurchase@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['comms', 'internship']
+//       },{
+//         name: 'Rita Hayworth',
+//         title: 'Communications Intern',
+//         department: 'Communications',
+//         phone: '432-367-9821',
+//         email: 'ritahayworth@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['comms', 'internship']
+//       },{
+//         name: 'Paul Belt',
+//         title: 'Design Intern',
+//         department: 'Art',
+//         phone: '432-367-9821',
+//         email: 'paulbelt@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['art', 'internship']
+//       },{
+//         name: 'Sandy Myers',
+//         title: 'Production Intern',
+//         department: 'Production',
+//         phone: '432-367-9821',
+//         email: 'marguerite@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['art', 'internship', 'pizza party']
+//       },
+//       {
+//         name: 'Aurora Smithson',
+//         title: 'VP of HR',
+//         department: 'Human Resources',
+//         phone: '432-367-9821',
+//         email: 'aurorasmithson@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['hr', 'callsheet']
+//       },
+//       // {
+//       //   name: 'Biggie Smalls',
+//       //   title: 'Legend',
+//       //   department: 'Music',
+//       //   phone: '432-367-9821',
+//       //   email: 'biggie@gmail.com',
+//       //   emergencyContactName: '',
+//       //   emergencyContactNumber: '',
+//       //   emergencyContactRelationship: '',
+//       //   distros: ['music', 'pizza party']
+//       // },
+//       // {
+//       //   name: 'Tupac Shakur',
+//       //   title: 'Legend',
+//       //   department: 'Music',
+//       //   phone: '432-367-9821',
+//       //   email: 'tupac@gmail.com',
+//       //   emergencyContactName: '',
+//       //   emergencyContactNumber: '',
+//       //   emergencyContactRelationship: '',
+//       //   distros: ['music', 'callsheet']
+//       // },
+//       {
+//         name: 'Kentucky Poole',
+//         title: 'Mascot',
+//         department: 'Morale',
+//         phone: '432-367-9821',
+//         email: 'marguerite@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['morale boost', 'selfcare']
+//       },
+//       {
+//         name: 'Jessica Rabrit',
+//         title: 'Mascot',
+//         department: 'Morale',
+//         phone: '432-367-9821',
+//         email: 'marguerite@gmail.com',
+//         emergencyContactName: '',
+//         emergencyContactNumber: '',
+//         emergencyContactRelationship: '',
+//         distros: ['morale boost', 'selfcare']
+//       },
+//     ],
+//     (error, data) => {
+//       res.redirect('/contacts')
+//     }
+//   )
+// })
 
 
 
